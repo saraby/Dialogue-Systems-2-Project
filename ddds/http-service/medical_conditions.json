@@ -1,0 +1,39 @@
+{
+    "Hypertension": {
+        "symptoms":["headache","short_breaths"],
+        "inform": "you have Hypertension but it's not too severe.",
+        "advices": "avoid stress, salty food and spices, smoking and Alcohol while it's recommended to do some light sports or jogging, eat healthy, measure your blood pressure gradually, especially during the seizure. alright?",
+        "prescriptions": "For Emergencies, during the seizure, take Captopril 25mg, but not when your blood pressure is below 160/110."
+    },
+    "Migrain": {
+        "symptoms":["headache","agitated","one_sided","eye_face_pain"],
+        "inform": "you have a condition we call Head Migraine.",
+        "advices": "avoid stress, smoking, alcohol, and caffeine in small amounts, while it's recommended to do some light sports or jogging, and eat healthy. Finding a calm environment, dark quiet rooms, and applying hot or cold compresses on your head and neck are recommended",
+        "prescriptions": "For Emergencies, during the seizure, take Sumatriptan 100mg. If still there is no relief after 2 hours you can take another dose."
+    },
+    "Bowel Inflammation": {
+        "symptoms":["fatigued","nausea_diarrhea", "watery_brown","stomachache", "no_appetite"],
+        "inform":"what you have is called bowel inflammation. ",
+        "advices": "follow a strict diet by increasing your intake of water and fluids, in addition to fiber which you can find in vegetables and fruits, for at least 3 to 4 days to compensate the loss. Then, if the condition persists, we urge you to return for a check up.No medications required.",
+        "prescriptions": null
+    },
+    "Drug-induced diarrhea": {
+        "symptoms":["fatigued","nausea_diarrhea", "watery_brown","stomachache", "with_appetite"],
+        "inform":"you probably have a condition called Drug-induced diarrhea.",
+        "advices": "We recommend you stop taking this drug forever, then visit your doctor and ask him to change your prescription. You need to follow a diet by increasing your intake of water and fluids, in addition to fiber which you can find in vegetables and fruits, for at least 3 to 4 days to compensate the loss. Then, if the condition persists, we urge you to return for a check up and further tests. ",
+        "prescriptions": null
+    },
+    "Stomach Ulcer": {
+        "symptoms":["stomachache","burning_sensation","nausea_belching"],
+        "inform":"",
+        "advices": "limit or preferably avoid chocolate, spices and spicy food, alcohol, acidic foods; oranges lemons and tomatoes and also caffeine",
+        "prescriptions": "take 40mg Omeprazole once a day and that would be half an hour before breakfast"
+    },
+    "Gallstones": {
+        "symptoms":["stomachache","burning_sensation","nausea_belching","orange_urine"],
+        "inform":"you probably have a condition called Gallstones.",
+        "advices": "drink as much water and clear fluids as you can until your body ejects it out. Nothing to worry about.",
+        "prescriptions": "we recommend you take Ciprofloxacin 500mg 2 times/day for 10 days if you feel any rise in your temperature."
+    }
+    
+}

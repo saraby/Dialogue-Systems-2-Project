@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<service_interface>
+
+    <query name="check_job">
+        <parameters>
+            <parameter predicate="occupation" format="value"/>
+        </parameters>
+        <target>
+            <http endpoint="http://ddds-http-service/check_job"/>
+        </target>
+    </query>
+
+    <query name="age_category">
+        <parameters>
+            <parameter predicate="age" format="value"/>
+        </parameters>
+        <target>
+            <http endpoint="http://ddds-http-service/age_category"/>
+        </target>
+    </query>
+
+    <query name="blood_pressure">
+        <parameters>
+            <parameter predicate="low_pressure" format="value"/>
+            <parameter predicate="high_pressure" format="value"/>
+        </parameters>
+        <target>
+            <http endpoint="http://ddds-http-service/blood_pressure"/>
+        </target>
+    </query>
+
+    <query name="diagnosis">
+        <parameters>
+            <parameter predicate="main_symptoms" format="value"/>
+            <!-- <parameter predicate="sound_light" format="value"/>
+            <parameter predicate="extra_symptoms" format="value"/>
+            <parameter predicate="headache_type" format="value"/>
+            <parameter predicate="additional_pain" format="value"/>
+            <parameter predicate="appetite" format="value"/>
+            <parameter predicate="sound_light" format="value"/>
+            <parameter predicate="defecate_texture" format="value"/> -->
+
+        </parameters>
+        <target>
+            <http endpoint="http://ddds-http-service/diagnosis"/>
+        </target>
+    </query>
+
+    <query name="inform">
+        <parameters>
+            <parameter predicate="diagnosis" format="value"/>
+        </parameters>
+        <target>
+            <http endpoint="http://ddds-http-service/inform"/>
+        </target>
+    </query>
+
+    <query name="get_advice">
+        <parameters>
+            <parameter predicate="diagnosis" format="value"/>
+        </parameters>
+        <target>
+            <http endpoint="http://ddds-http-service/get_advice"/>
+        </target>
+    </query>
+
+    <query name="prescribe">
+        <parameters>
+            <parameter predicate="diagnosis" format="value"/>
+        </parameters>
+        <target>
+            <http endpoint="http://ddds-http-service/prescribe"/>
+        </target>
+    </query>
+
+    <!-- <validator name="PrescriptionsAvailable">
+        <parameters>
+            <parameter predicate="diagnosis" format="value"/>
+        </parameters>
+        <target>
+            <http endpoint="http://ddds-http-service/prescriptions_available"/>
+        </target>
+    </validator> -->
+
+</service_interface>

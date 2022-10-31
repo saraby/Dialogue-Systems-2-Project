@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<grammar>
+
+  <action name="top">
+    <one-of>
+      <item>main menu</item>
+      <item>top</item>
+      <item>beginning</item>
+      <item>cancel</item>
+      <item>forget it</item>
+      <item>never mind</item>
+      <item>abort</item>
+    </one-of>
+  </action>
+
+  <action name="up">
+    <one-of>
+      <item>up</item>
+      <item>back</item>
+      <item>go back</item>
+    </one-of>
+  </action>
+
+
+  <action name="headache_symptom">
+    <one-of>
+      <item>a headache</item>
+      <item>a strong headache</item>
+      <item>a severe headache</item>
+      <item>I have a severe headache</item>
+      <item>I have been having a severe headache</item>
+      <item>I suffer from a severe headache</item>
+    </one-of>
+  </action>
+
+  <action name="fatigued_symptom">
+    <one-of>
+      <item>I am fatigued</item>
+      <item>I am fatigued and exhausted</item>
+      <item>I feel myself fatigued and exhausted</item>
+      <item>I feel my whole body is fatigued and exhausted</item>
+      <item>I have been feeling fatigued and exhausted for some time now</item>
+      <item>I am exhausted</item>
+    </one-of>
+  </action>
+
+  <action name="stomachache_symptom">
+    <one-of>
+      <item>I have a severe stomach pain</item>
+      <item>there is a severe stomach pain</item>
+      <item>I have a strong stomach pain</item>
+      <item>I have a severe stomachache</item>
+      <item>My stomach pain is unbearable</item>
+      <item>I suffer from a severe stomach pain</item>
+    </one-of>
+  </action>
+
+
+  <action name="hypertension_action">hypertension</action>
+  <action name="migrain_action">migrain</action>
+  <action name="stomach_ulcer_action">stomach ulcer</action>
+  <action name="bowel_inflammation_action">bowel inflammation</action>
+  <action name="drug_diarrhea_action">drug induced diarrhea</action>
+  <action name="gallstones_action">gallstones</action>
+  
+
+  <question speaker="system" predicate="age" type="wh_question">How old are you</question>
+  <question speaker="system" predicate="occupation" type="wh_question">What do you do for a living</question>
+  <question speaker="system" predicate="additional_pain" type="wh_question">Could you describe any pain you feel during the seizure</question>
+  <question speaker="system" predicate="headache_type" type="wh_question">Is your headache one-sided or does it spread randomly</question>
+  <question speaker="system" predicate="when_started" type="wh_question">since when are you feeling this way</question>
+  <question speaker="system" predicate="num_defecate" type="wh_question">How many times did you defecate</question>
+  <question speaker="system" predicate="defecate_texture" type="wh_question">Is the texture watery or loose and what colour is it</question>
+  <question speaker="system" predicate="what_meds" type="wh_question">Do you recall the name of it</question>
+  <question speaker="system" predicate="meds_days" type="wh_question">how many days have you been taking this medication</question>
+  
+  
+  <question speaker="user" predicate="prescribe" type="wh_question">
+    <one-of>
+      <item>Will you prescribe any medications</item>
+      <item>is there any medications that could help easing the pain</item>
+      <item>What kind of medications I am advice to take</item>
+      <item>do you see any necessity to take medications</item>
+      <item>is there a treatment for such conditions</item>
+      <item>should I also start taking any kind of treatments</item>
+    </one-of>
+  </question>
+
+
+
+  <answer speaker="user">
+    <one-of>
+
+      <item>I work as <slot predicate="occupation"/></item>
+      <item>I work <slot predicate="occupation"/></item>
+      <item>I am <slot predicate="occupation"/></item>
+      <item>I currently work as <slot predicate="occupation"/></item>
+
+      <item> <slot predicate="extra_symptoms"/> </item>
+      <item>I have <slot predicate="extra_symptoms"/></item>
+      <item>I suffer from <slot predicate="extra_symptoms"/></item>
+      <item>I feel <slot predicate="extra_symptoms"/></item>
+      <item>I am <slot predicate="extra_symptoms"/></item>
+
+      <item>it is <slot predicate="headache_type"/> </item>
+      <item>I feel the pain on the <slot predicate="headache_type"/></item>
+      <item>it hits on the <slot predicate="headache_type"/></item>
+      <item>I feel on the <slot predicate="headache_type"/></item>
+      <item>usually I can feel it <slot predicate="headache_type"/></item>
+
+      <item>I feel pain in my <slot predicate="additional_pain"/> </item>
+      <item>there is a clear pain in the <slot predicate="additional_pain"/></item>
+      <item>there is pain that hits in <slot predicate="additional_pain"/></item>
+
+      <item>it started <slot predicate="when_started"/></item>
+      <item>I started to feel this way since <slot predicate="when_started"/></item>
+
+      <item>my pressure is <slot predicate="high_pressure"/> over <slot predicate="low_pressure"/></item>
+      <item>it is <slot predicate="high_pressure"/> over <slot predicate="low_pressure"/></item>
+      
+      <item>about <slot predicate="num_defecate"/> times</item>
+      <item>maybe <slot predicate="num_defecate"/> times</item>
+
+      <item>it is <slot predicate="defecate_texture"/> </item>
+      <item>I noticed that it was <slot predicate="defecate_texture"/> times</item>
+
+      <item>my Otolaryngologist prescribed <slot predicate="what_meds"/> for my year infection</item>
+      <item>its name is<slot predicate="what_meds"/> </item>
+      <item>it is <slot predicate="what_meds"/> </item>
+      <item>one of my doctors prescribed <slot predicate="what_meds"/> </item>
+
+      <item>for <slot predicate="meds_days"/> days </item>
+      <item>since <slot predicate="meds_days"/> days ago </item>
+      <item>I have been taking it for <slot predicate="meds_days"/> days </item>
+      
+
+    </one-of>
+  </answer>
+
+  <individual name="headache">headache</individual>
+  <individual name="short_breaths">
+    <one-of>
+      <item>short breaths</item>
+      <item>short breaths like my chest is being closed </item>
+    </one-of>
+  </individual>
+  <individual name="agitated">agitated</individual>
+  
+  <individual name="fatigued">
+    <one-of>
+      <item>fatigued</item>
+      <item>fatigued and exhausted</item>
+      <item>exhausted</item>
+    </one-of>
+  </individual>
+  <individual name="nausea_diarrhea">nausea and diarrhea</individual>
+
+  <individual name="stomachache">
+    <one-of>
+      <item>stomach pain</item>
+      <item>stomachache</item>
+    </one-of>
+  </individual>
+
+  <individual name="one_sided">
+    <one-of>
+      <item>right side</item>
+      <item>left side</item>
+      <item>one side</item>
+      <item>one sided</item>
+    </one-of>
+  </individual>
+
+  <individual name="eye_face_pain">
+    <one-of>
+      <item>one eye and one side of my face</item>
+      <item>left eye and left side of my face</item>
+      <item>right eye and right side of my face</item>
+    </one-of>
+  </individual>
+
+  <individual name="young">young</individual>
+  <individual name="risk_group">risk groub</individual>
+  <individual name="accountant">an accountant</individual>
+  <individual name="it_related">
+    <one-of>
+      <item>an it support</item>
+      <item>an informatics engineer</item>
+      <item>a programmer</item>
+      <item>a software developer</item>
+    </one-of>
+  </individual>
+  <individual name="journalist">a journalist</individual>
+  <individual name="call_center">in a call center</individual>
+  <individual name="low">low</individual>
+  <individual name="high">high</individual>
+  <individual name="no_appetite">no appetite</individual>
+  <individual name="with_appetite">have appetite</individual>
+  <individual name="watery_brown">Watery and the colour is normal light brown</individual>
+  <individual name="when">
+    <one-of>
+      <item>yesterday</item>
+      <item>two days ago</item>
+    </one-of>
+  </individual>
+  <individual name="a_med">Clarithromycin</individual>
+
+  <!-- <validity name="PrescriptionsAvailable">
+     There is no prescriptions for your case of <slot predicate="diagnosis"/> just stick to what I have adviced you to do
+  </validity> -->
+
+  <report action="hypertension_action" status="ended">
+    Try to do what we agreed upon and good luck/>
+  </report>
+
+  <report action="migrain_action" status="ended">
+    Try to do what we agreed upon and good luck/>
+  </report>
+
+  <report action="bowel_inflammation_action" status="ended">
+    Try to do what we agreed upon and good luck/>
+  </report>
+
+  <report action="stomach_ulcer_action" status="ended">
+    Try to do what we agreed upon and good luck/>
+  </report>
+
+  <report action="drug_diarrhea_action" status="ended">
+    Try to do what we agreed upon and good luck/>
+  </report>
+
+  <report action="gallstones_action" status="ended">
+    Try to do what we agreed upon and good luck/>
+  </report>
+  <!-- <individual name="hypertension">hypertension</individual>
+  <individual name="migrain">migrain</individual>
+  <individual name="bowel_inf" >bowel inflammation</individual>
+  <individual name="drug_induced" >drug induced</individual>
+  <individual name="stom_ulc">stomache ulcer</individual>
+  <individual name="gallstones" >gallstones</individual> -->
+    
+</grammar>

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ontology name="TheDoctorOntology">
+
+    <!-- <action name="diagnose"/> -->
+    <action name="headache_symptom"/>
+    <action name="fatigued_symptom"/>
+    <action name="stomachache_symptom"/>
+
+    <action name="hypertension_action"/>
+    <!-- <action name="diagnose_hypertension"/> -->
+
+    <action name="migrain_action"/>
+    <!-- <action name="diagnose_migrain"/> -->
+   
+    <action name="stomach_ulcer_action"  />
+    <action name="bowel_inflammation_action"  />
+    <action name="drug_diarrhea_action"  />
+    <action name="gallstones_action"  />
+    <action name="prescriptions"/>
+
+
+    <sort name="symptom"/>
+    <sort name="category"/>
+    <sort name="data"/>
+    <sort name="level"/>
+    <sort name="time"/>
+    <sort name="meds"/>
+    <!-- <sort name="diagnosis"/> -->
+
+    <predicate name="has_neck_pain" sort="boolean"/>
+    <predicate name="by_sound_light" sort="boolean"/>
+    <predicate name="has_extra_symptoms" sort="boolean"/>
+    <predicate name="glasses" sort="boolean"/>
+    <predicate name="family_history" sort="boolean"/>
+    <predicate name="check_job" sort="boolean"/>
+    <predicate name="lights_brighter" sort="boolean"/>
+    <predicate name="has_stomachache" sort="boolean"/>
+    <predicate name="fast_food" sort="boolean"/>
+    <predicate name="has_appetite" sort="boolean"/>
+    <predicate name="has_vomitting" sort="boolean"/>
+    <predicate name="taking_meds" sort="boolean"/>
+
+    
+
+
+    <predicate name="main_symptoms" sort="symptom"/>
+    <predicate name="sound_light" sort="symptom"/>
+    <!-- <predicate name="neck_pain" sort="symptom"/> -->
+    <predicate name="extra_symptoms" sort="symptom"/>
+    <predicate name="headache_type" sort="symptom"/>
+    <predicate name="additional_pain" sort="symptom"/>
+    <predicate name="defecate_texture" sort="symptom"/>
+    <predicate name="appetite" sort="symptom"/>
+
+    <predicate name="age_category" sort="category"/>
+
+    <predicate name="occupation" sort="data"/>
+
+    <predicate name="blood_pressure" sort="level"/>
+
+    <predicate name="when_started" sort="time"/>
+
+    <predicate name="what_meds" sort="meds"/>
+
+
+    <!-- <predicate name="which_condition" sort="condition"/> -->
+
+    <predicate name="age" sort="integer"/>
+    <predicate name="low_pressure" sort="integer"/>
+    <predicate name="high_pressure" sort="integer"/>
+    <predicate name="num_defecate" sort="integer"/>
+    <predicate name="meds_days" sort="integer"/>
+
+
+    <predicate name="diagnosis" sort="string"/>
+    <predicate name="inform" sort="string"/>
+    <predicate name="get_advice" sort="string"/>
+    <predicate name="prescribe" sort="string"/>
+
+    
+    <individual name="headache" sort="symptom"/>
+    <individual name="short_breaths" sort="symptom"/>
+    <individual name="agitated" sort="symptom"/>
+    <individual name="fatigued" sort="symptom"/>
+    <individual name="nausea_diarrhea" sort="symptom"/>
+    <individual name="one_sided" sort="symptom"/>
+    <individual name="eye_face_pain" sort="symptom"/>
+    <individual name="stomachache" sort="symptom"/>
+    <individual name="no_appetite" sort="symptom"/>
+    <individual name="with_appetite" sort="symptom"/>
+    <individual name="watery_brown" sort="symptom"/>
+
+
+    <individual name="young" sort="category"/>
+    <individual name="risk_group" sort="category"/>
+
+    <individual name="accountant" sort="data"/>
+    <individual name="it_related" sort="data"/>
+    <individual name="call_center" sort="data"/>
+    <individual name="journalist" sort="data"/>
+
+    <individual name="low" sort="level"/>
+    <individual name="high" sort="level"/>
+
+    <individual name="when" sort="time"/>
+    <individual name="a_med" sort="meds"/>
+
+
+    <!-- <individual name="hypertension" sort="condition"/>
+    <individual name="migrain" sort="condition"/>
+    <individual name="bowel_inf" sort="condition"/>
+    <individual name="drug_induced" sort="condition"/>
+    <individual name="stom_ulc" sort="condition"/>
+    <individual name="gallstones" sort="condition"/> -->
+    
+
+
+</ontology>

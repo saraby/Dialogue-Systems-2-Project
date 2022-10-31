@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="utf-8"?>
+<domain name="TheDoctorDomain" is_super_domain="true">
+  <goal type="perform" action="top">
+    <plan>
+      <forget_all/>
+      <findout type="alt_question">
+        <alt><perform action="headache_symptom" /></alt>
+        <alt><perform action="fatigued_symptom" /></alt>
+        <alt><perform action="stomachache_symptom" /></alt>
+      </findout>
+    </plan>
+  </goal>
+  <!-- in the nlg force the system to start -->
+
+
+  <goal type="perform" action="headache_symptom">
+    <plan>
+      <assume_shared>
+        <proposition predicate="main_symptoms" value="headache" />
+      </assume_shared>
+      <findout type="wh_question" predicate="age"/>
+      <invoke_service_query predicate="age_category" type="wh_question"/>
+
+      <if>
+        <proposition predicate="age_category" value="young"/>
+        <then>
+          <findout type="wh_question" predicate="occupation" />
+          <!-- <invoke_service_query predicate="check_job" type="yn_question"/> -->
+          <invoke_service_query type="yn_question">
+            <proposition predicate="check_job"/>
+          </invoke_service_query>
+
+          <if>
+            <proposition predicate="check_job"/>
+            <then>
+              <findout type="yn_question">
+                 <proposition predicate="by_sound_light"/>
+              </findout>
+
+              <if>
+                <proposition predicate="by_sound_light" value="false"/>
+                <then>
+                  <jumpto type="perform" action="hypertension_action"/>
+                </then>
+                <else>
+                  <assume_shared>
+                    <proposition predicate="sound_light" value="agitated" />
+                  </assume_shared>
+                  <jumpto type="perform" action="migrain_action"/>
+                </else>
+              </if>
+            </then>
+          </if>
+          
+
+        </then>
+      </if>
+      <signal_action_completion />
+
+    </plan>
+  </goal>
+
+
+  <goal type="perform" action="hypertension_action">
+    <plan>
+      <findout type="yn_question">
+         <proposition predicate="has_neck_pain" />
+      </findout>
+              
+      <if>
+        <proposition predicate="has_neck_pain" value="false" />
+        <then>
+          <findout type="yn_question">
+             <proposition predicate="glasses" />
+          </findout> 
+          
+          <if>
+            <proposition predicate="glasses" />
+            <then>
+              <findout type="yn_question" >
+                 <proposition predicate="has_extra_symptoms" />
+              </findout>
+              
+              <if>
+                <proposition predicate="has_extra_symptoms" />
+                <then> 
+                  <findout type="wh_question" predicate="extra_symptoms" />
+                  <findout type="wh_question" predicate="high_pressure" />
+                  <bind type="wh_question" predicate="low_pressure" />
+                  <invoke_service_query predicate="blood_pressure" type="wh_question"/>
+
+                  <if>
+                    <proposition predicate="blood_pressure" value="high"/>
+                    <then>
+                      <findout type="yn_question" >
+                         <proposition predicate="family_history" />
+                      </findout>
+                  
+                      <if>
+                        <proposition predicate="family_history"/>
+                        <then>
+                          <invoke_service_query predicate="diagnosis" type="wh_question"/>
+                          <invoke_service_query predicate="inform" type="wh_question"/>
+                          <get_done action="patient_inform" />
+                          <invoke_service_query predicate="get_advice" type="wh_question"/>
+                          <get_done action="advices" />
+                          <signal_action_completion />
+                        </then>
+                      </if>
+
+                    </then>
+                  </if>
+
+                </then>
+              </if>
+
+            </then>
+          </if>
+
+        </then>
+      </if>
+
+    </plan>
+  </goal>
+
+  <goal type="perform" action="migrain_action">
+    <plan>
+      <findout type="yn_question" >
+         <proposition predicate="lights_brighter" />
+      </findout>
+              
+      <if>
+        <proposition predicate="lights_brighter" />
+        <then>
+          <findout type="wh_question" predicate="headache_type" />
+
+          <if>
+            <proposition predicate="headache_type" value="one_sided" />
+            <then>
+              <findout type="wh_question" predicate="additional_pain" />
+              
+              <if>
+                <proposition predicate="additional_pain" value="eye_face_pain" />
+                <then> 
+                  <findout type="yn_question">
+                     <proposition predicate="has_neck_pain"/>
+                  </findout>
+                  
+                    <if>
+                      <proposition predicate="has_neck_pain" value="false" />
+                      <then>
+                        <findout type="yn_question" >
+                           <proposition predicate="glasses" />
+                        </findout>
+                        <findout type="yn_question" >
+                          <proposition predicate="has_extra_symptoms" />
+                        </findout>
+
+                        <if>
+                          <proposition predicate="has_extra_symptoms" value="false"/>
+                          <then>
+                            <invoke_service_query predicate="diagnosis" type="wh_question"/>
+                            <invoke_service_query predicate="inform" type="wh_question"/>
+                            <get_done action="patient_inform" />
+                            <invoke_service_query predicate="get_advice" type="wh_question"/>
+                            <get_done action="advices" />
+                            <signal_action_completion />
+                          </then>
+                        </if>
+
+                      </then>
+                    </if>
+
+                </then>
+              </if>
+
+            </then>
+          </if>
+
+        </then>
+      </if>
+    </plan>
+  </goal>
+  
+  <goal type="perform" action="fatigued_symptom">
+    <plan>
+      <assume_shared>
+        <proposition predicate="main_symptoms" value="fatigued" />
+      </assume_shared>
+      <findout type="wh_question" predicate="extra_symptoms" />
+      <findout type="wh_question" predicate="when_started" />
+      <findout type="wh_question" predicate="num_defecate" />
+      <findout type="wh_question" predicate="defecate_texture" />
+      <findout type="yn_question" >
+         <proposition predicate="has_stomachache" />
+      </findout>
+      <if>
+        <proposition predicate="has_stomachache"/>
+        <then>
+          <assume_shared>
+            <proposition predicate="additional_pain" value="stomachache" />
+          </assume_shared>
+          <findout type="yn_question" >
+            <proposition predicate="fast_food" />
+          </findout>
+
+          <if>
+            <proposition predicate="fast_food"/>
+            <then>
+              <jumpto type="perform" action="bowel_inflammation_action"/>
+            </then>
+            <else>
+              <jumpto type="perform" action="drug_diarrhea_action"/>
+            </else>
+          </if>
+
+        </then>
+      </if>
+    </plan>
+  </goal>
+
+  <goal type="perform" action="bowel_inflammation_action">
+    <plan>
+      <findout type="yn_question" >
+         <proposition predicate="has_appetite" />
+      </findout>
+      <if>
+        <proposition predicate="has_appetite" value="false"/>
+        <then>
+          <assume_shared>
+            <proposition predicate="appetite" value="no_appetite" />
+          </assume_shared>
+          <invoke_service_query predicate="diagnosis" type="wh_question"/>
+          <invoke_service_query predicate="inform" type="wh_question"/>
+          <get_done action="patient_inform" />
+          <invoke_service_query predicate="get_advice" type="wh_question"/>
+          <get_done action="advices" />
+          <signal_action_completion />
+        </then>
+      </if>
+     
+    </plan>
+  </goal>
+
+  <goal type="perform" action="drug_diarrhea_action">
+    <plan>
+     <findout type="yn_question" >
+         <proposition predicate="has_appetite" />
+      </findout>
+      <if>
+        <proposition predicate="has_appetite"/>
+        <then>
+          <assume_shared>
+            <proposition predicate="appetite" value="with_appetite" />
+          </assume_shared>
+          <findout type="yn_question" >
+            <proposition predicate="has_vomitting" />
+          </findout>
+          <if>
+            <proposition predicate="has_vomitting" value="false"/>
+            <then>
+              <findout type="yn_question" >
+                <proposition predicate="taking_meds" />
+              </findout>
+              <if>
+                <proposition predicate="taking_meds"/>
+                <then>
+                  <findout type="wh_question" predicate="what_meds" />
+                  <findout type="wh_question" predicate="meds_days" />
+                  <invoke_service_query predicate="diagnosis" type="wh_question"/>
+                  <invoke_service_query predicate="inform" type="wh_question"/>
+                  <get_done action="patient_inform" />
+                  <invoke_service_query predicate="get_advice" type="wh_question"/>
+                  <get_done action="advices" />
+                  <signal_action_completion />
+                </then>
+              </if>
+            </then>
+          </if>
+        </then>
+      </if>
+    </plan>
+  </goal>
+
+  <goal type="perform" action="stomachache_symptom">
+    <plan>
+      <assume_shared>
+        <proposition predicate="main_symptoms" value="stomachache" />
+      </assume_shared>
+      
+    </plan>
+  </goal>
+
+  <goal type="perform" action="stomach_ulcer_action">
+    <plan>
+     
+    </plan>
+  </goal>
+
+  <goal type="perform" action="gallstones_action">
+    <plan>
+     
+    </plan>
+  </goal>
+
+  <goal type="resolve" question_type="wh_question" predicate="prescribe">
+    <plan>
+      <invoke_service_query predicate="prescribe" type="wh_question"/>
+      <get_done action="prescriptions" />
+    </plan>
+  </goal>
+
+</domain>
