@@ -62,5 +62,9 @@
     {
         "match": "report(action_status(patient_inform, done))",
         "utterance": "Great! let's continue then."
+    },
+    {
+        "match": "report(action_status(advices, done))",
+        "utterance": "Now!"
     }
 ]

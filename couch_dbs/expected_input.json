@@ -1,92 +1,58 @@
 [
     {
-        "current_plan_item": "findout(?X.example_predicate(X), set([example_predicate(individual_1), example_predicate(individual_2), example_predicate(individual_3)]))",
-        "semantic_expression": "answer(example_predicate(individual_1))",
+        "current_plan_item": "findout(?set([goal(perform(headache_symptom)), goal(perform(fatigued_symptom)), goal(perform(stomachache_symptom))]))",
+        "semantic_expression": "request(headache_symptom)",
         "alternative": {
             "visual_information": [
                 {
                     "attribute": "name",
                     "type": "text/plain",
-                    "value": "Some text to show on the button"
+                    "value": "A headache"
                 },
                 {
                     "attribute": "image",
                     "type": "image/jpeg",
-                    "value": "https://some-image-url"
+                    "value": "http://content.health.harvard.edu/wp-content/uploads/2022/08/bf58db0e-a495-4738-bbe6-cdb6cfb167a6.jpg"
                 }
             ]
         }
     },
     {
-        "current_plan_item": "findout(?X.example_predicate(X), set([example_predicate(individual_1), example_predicate(individual_2), example_predicate(individual_3)]))",
-        "semantic_expression": "answer(example_predicate(individual_2))",
+        "current_plan_item": "findout(?set([goal(perform(headache_symptom)), goal(perform(fatigued_symptom)), goal(perform(stomachache_symptom))]))",
+        "semantic_expression": "request(fatigued_symptom)",
         "alternative": {
             "visual_information": [
                 {
                     "attribute": "name",
                     "type": "text/plain",
-                    "value": "Some other text to show on the button"
+                    "value": "Fatigued and Exhausted"
                 },
                 {
                     "attribute": "image",
                     "type": "image/jpeg",
-                    "value": "https://some-other-image-url"
+                    "value": "https://www.socialworker.com/downloads/1679/download/exhausted600.jpg?cb=92f627d57047fdb34052c730f4f65e8c"
                 }
             ]
         }
     },
     {
-        "current_plan_item": "findout(?X.example_predicate(X), set([example_predicate(individual_1), example_predicate(individual_2), example_predicate(individual_3)]))",
-        "semantic_expression": "answer(example_predicate(individual_3))",
+        "current_plan_item": "findout(?set([goal(perform(headache_symptom)), goal(perform(fatigued_symptom)), goal(perform(stomachache_symptom))]))",
+        "semantic_expression": "request(stomachache_symptom)",
         "alternative": {
             "visual_information": [
                 {
                     "attribute": "name",
                     "type": "text/plain",
-                    "value": "Another text to show on the button"
+                    "value": "Stomach Pain"
                 },
                 {
                     "attribute": "image",
                     "type": "image/jpeg",
-                    "value": "https://another-image-url"
-                }
-            ]
-        }
-    },
-    {
-        "current_plan_item": "findout(?set([goal(perform(example_action_1)), goal(perform(example_action_2))]))",
-        "semantic_expression": "request(example_action_1)",
-        "alternative": {
-            "visual_information": [
-                {
-                    "attribute": "name",
-                    "type": "text/plain",
-                    "value": "Button text"
-                },
-                {
-                    "attribute": "image",
-                    "type": "image/jpeg",
-                    "value": "https://image-url"
-                }
-            ]
-        }
-    },
-    {
-        "current_plan_item": "findout(?set([goal(perform(example_action_1)), goal(perform(example_action_2))]))",
-        "semantic_expression": "request(example_action_2)",
-        "alternative": {
-            "visual_information": [
-                {
-                    "attribute": "name",
-                    "type": "text/plain",
-                    "value": "Button text"
-                },
-                {
-                    "attribute": "image",
-                    "type": "image/jpeg",
-                    "value": "https://image-url"
+                    "value": "https://www.mclaren.org/Uploads/Public/Images/Blog/lansing/Stomach%20Pain%202%20web.jpg"
                 }
             ]
         }
     }
+  
+   
 ]
