@@ -1,6 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
 <service_interface>
 
+    <action name="hypertension_action">
+        <parameters>
+        <parameter predicate="diagnosis" format="value"/>
+        </parameters>
+        <failure_reasons/>
+        <target>
+        <http endpoint="http://ddds-http-service/action_success_response"/>
+        </target>
+    </action>
+
+    <action name="migrain_action">
+        <parameters>
+        <parameter predicate="diagnosis" format="value"/>
+        </parameters>
+        <failure_reasons/>
+        <target>
+        <http endpoint="http://ddds-http-service/action_success_response"/>
+        </target>
+    </action>
+
+    <action name="bowel_inflammation_action">
+        <parameters>
+        <parameter predicate="diagnosis" format="value"/>
+        </parameters>
+        <failure_reasons/>
+        <target>
+        <http endpoint="http://ddds-http-service/action_success_response"/>
+        </target>
+    </action>
+
+    <action name="drug_diarrhea_action">
+        <parameters>
+        <parameter predicate="diagnosis" format="value"/>
+
+        </parameters>
+        <failure_reasons/>
+        <target>
+        <http endpoint="http://ddds-http-service/action_success_response"/>
+        </target>
+    </action>
+    
+
     <query name="check_job">
         <parameters>
             <parameter predicate="occupation" format="value"/>
