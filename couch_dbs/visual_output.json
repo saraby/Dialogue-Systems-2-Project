@@ -1,16 +1,16 @@
 [
     {
-        "semantic_expression": "some(semantic_expression_of_a_move)",
+        "semantic_expression": "ask(?X.occupation(X))",
         "visual_information": [
             {
                 "attribute": "name",
                 "type": "text/plain",
-                "value": "Some text to show if the image cannot be shown"
+                "value": "Is it a desk job?"
             },
             {
                 "attribute": "image",
                 "type": "image/jpeg",
-                "value": "https://some-image-url"
+                "value": "https://health.clevelandclinic.org/wp-content/uploads/sites/3/2017/12/tensionHeadache-964894284-770x533-1-650x428.jpg"
             }
         ]
     },

@@ -209,7 +209,7 @@ def diagnosis():
     for j in MC:
 
         if MC[j]["symptoms"] == symptom_list:
-            print(3*"\n", j, 3*"\n")
+            # print(3*"\n", j, 3*"\n")
             diagnosis = str(j)
               
     return query_response(value=diagnosis, grammar_entry=None)
@@ -240,20 +240,20 @@ def prescribe():
     print(3*"\n", payload, 3*"\n")
     get_diagnosis = payload["context"]["facts"]["diagnosis"]["value"]
     medication = MC[get_diagnosis]["prescriptions"]
-    if not medication :
-      prescribe = "There is no prescriptions for your case of" + \
-        get_diagnosis + "just stick to what I have adviced you to do"
-    else:
-      prescribe = medication
+    # if not medication :
+    #   prescribe = "There is no prescriptions for your case of" + \
+    #     get_diagnosis + "just stick to what I have adviced you to do"
+    # else:
+    prescribe = medication
 
     return query_response(value=prescribe, grammar_entry=None)
 
 
-# @app.route("/prescriptions_available", methods=['POST'])
-# def prescriptions_available():
-#     payload = request.get_json()
-#     get_diagnosis = payload["context"]["facts"]["diagnosis"]["value"]
-#     if MC[get_diagnosis]["prescriptions"] is None:
-#         return validator_response(is_valid=False)
-#     return validator_response(is_valid=True)
+@app.route("/prescriptions_available", methods=['POST'])
+def prescriptions_available():
+    payload = request.get_json()
+    get_diagnosis = payload["context"]["facts"]["diagnosis"]["value"]
+    if MC[get_diagnosis]["prescriptions"] is None:
+        return validator_response(is_valid=False)
+    return validator_response(is_valid=True)
   

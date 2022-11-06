@@ -55,13 +55,13 @@
     </one-of>
   </action>
 
-
+<!-- 
   <action name="hypertension_action">hypertension</action>
   <action name="migrain_action">migrain</action>
   <action name="stomach_ulcer_action">stomach ulcer</action>
   <action name="bowel_inflammation_action">bowel inflammation</action>
   <action name="drug_diarrhea_action">drug induced diarrhea</action>
-  <action name="gallstones_action">gallstones</action>
+  <action name="gallstones_action">gallstones</action> -->
   
 
   <question speaker="system" predicate="age" type="wh_question">How old are you</question>
@@ -205,38 +205,12 @@
   </individual>
   <individual name="a_med">Clarithromycin</individual>
 
-  <!-- <validity name="PrescriptionsAvailable">
+  <individual name="diagnosis_done">Try to do what we agreed upon and I hope you get better</individual>
+
+  <validity name="PrescriptionsAvailable">
      There is no prescriptions for your case of <slot predicate="diagnosis"/> just stick to what I have adviced you to do
-  </validity> -->
+  </validity>
 
-  <report action="hypertension_action" status="ended">
-    Try to do what we agreed upon and I hope your <slot predicate="diagnosis"/> gets better
-  </report>
-
-  <report action="migrain_action" status="ended">
-    Try to do what we agreed upon and I hope your <slot predicate="diagnosis"/> gets better
-  </report>
-
-  <report action="bowel_inflammation_action" status="ended">
-    Try to do what we agreed upon and I hope your <slot predicate="diagnosis"/> gets better
-  </report>
-
-  <report action="stomach_ulcer_action" status="ended">
-    Try to do what we agreed upon and I hope your <slot predicate="diagnosis"/> gets better
-  </report>
-
-  <report action="drug_diarrhea_action" status="ended">
-    Try to do what we agreed upon and I hope your <slot predicate="diagnosis"/> gets better
-  </report>
-
-  <report action="gallstones_action" status="ended">
-    Try to do what we agreed upon and I hope your <slot predicate="diagnosis"/> gets better
-  </report>
-  <!-- <individual name="hypertension">hypertension</individual>
-  <individual name="migrain">migrain</individual>
-  <individual name="bowel_inf" >bowel inflammation</individual>
-  <individual name="drug_induced" >drug induced</individual>
-  <individual name="stom_ulc">stomache ulcer</individual>
-  <individual name="gallstones" >gallstones</individual> -->
+ 
     
 </grammar>

@@ -25,6 +25,8 @@
     <sort name="level"/>
     <sort name="time"/>
     <sort name="meds"/>
+    <sort name="is_done"/>
+
     <!-- <sort name="diagnosis"/> -->
 
     <predicate name="has_neck_pain" sort="boolean"/>
@@ -39,9 +41,6 @@
     <predicate name="has_appetite" sort="boolean"/>
     <predicate name="has_vomitting" sort="boolean"/>
     <predicate name="taking_meds" sort="boolean"/>
-
-    
-
 
     <predicate name="main_symptoms" sort="symptom"/>
     <predicate name="sound_light" sort="symptom"/>
@@ -62,6 +61,7 @@
 
     <predicate name="what_meds" sort="meds"/>
 
+    <predicate name="diagnosed" sort="is_done"/>
 
     <!-- <predicate name="which_condition" sort="condition"/> -->
 
@@ -71,12 +71,10 @@
     <predicate name="num_defecate" sort="integer"/>
     <predicate name="meds_days" sort="integer"/>
 
-
     <predicate name="diagnosis" sort="string"/>
     <predicate name="inform" sort="string"/>
     <predicate name="get_advice" sort="string"/>
     <predicate name="prescribe" sort="string"/>
-
     
     <individual name="headache" sort="symptom"/>
     <individual name="short_breaths" sort="symptom"/>
@@ -89,7 +87,6 @@
     <individual name="no_appetite" sort="symptom"/>
     <individual name="with_appetite" sort="symptom"/>
     <individual name="watery_brown" sort="symptom"/>
-
 
     <individual name="young" sort="category"/>
     <individual name="risk_group" sort="category"/>
@@ -104,8 +101,9 @@
 
     <individual name="when" sort="time"/>
     <individual name="a_med" sort="meds"/>
-
-
+    
+    <individual name="diagnosis_done" sort="is_done"/>
+    
     <!-- <individual name="hypertension" sort="condition"/>
     <individual name="migrain" sort="condition"/>
     <individual name="bowel_inf" sort="condition"/>

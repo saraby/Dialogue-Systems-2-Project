@@ -1,48 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <service_interface>
 
-    <action name="hypertension_action">
-        <parameters>
-        <parameter predicate="diagnosis" format="value"/>
-        </parameters>
-        <failure_reasons/>
-        <target>
-        <http endpoint="http://ddds-http-service/action_success_response"/>
-        </target>
-    </action>
-
-    <action name="migrain_action">
-        <parameters>
-        <parameter predicate="diagnosis" format="value"/>
-        </parameters>
-        <failure_reasons/>
-        <target>
-        <http endpoint="http://ddds-http-service/action_success_response"/>
-        </target>
-    </action>
-
-    <action name="bowel_inflammation_action">
-        <parameters>
-        <parameter predicate="diagnosis" format="value"/>
-        </parameters>
-        <failure_reasons/>
-        <target>
-        <http endpoint="http://ddds-http-service/action_success_response"/>
-        </target>
-    </action>
-
-    <action name="drug_diarrhea_action">
-        <parameters>
-        <parameter predicate="diagnosis" format="value"/>
-
-        </parameters>
-        <failure_reasons/>
-        <target>
-        <http endpoint="http://ddds-http-service/action_success_response"/>
-        </target>
-    </action>
-    
-
     <query name="check_job">
         <parameters>
             <parameter predicate="occupation" format="value"/>
@@ -74,14 +32,6 @@
     <query name="diagnosis">
         <parameters>
             <parameter predicate="main_symptoms" format="value"/>
-            <!-- <parameter predicate="sound_light" format="value"/>
-            <parameter predicate="extra_symptoms" format="value"/>
-            <parameter predicate="headache_type" format="value"/>
-            <parameter predicate="additional_pain" format="value"/>
-            <parameter predicate="appetite" format="value"/>
-            <parameter predicate="sound_light" format="value"/>
-            <parameter predicate="defecate_texture" format="value"/> -->
-
         </parameters>
         <target>
             <http endpoint="http://ddds-http-service/diagnosis"/>
@@ -115,13 +65,13 @@
         </target>
     </query>
 
-    <!-- <validator name="PrescriptionsAvailable">
+    <validator name="PrescriptionsAvailable">
         <parameters>
             <parameter predicate="diagnosis" format="value"/>
         </parameters>
         <target>
             <http endpoint="http://ddds-http-service/prescriptions_available"/>
         </target>
-    </validator> -->
+    </validator>
 
 </service_interface>

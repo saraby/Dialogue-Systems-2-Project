@@ -104,8 +104,11 @@
                           <get_done action="patient_inform" />
                           <invoke_service_query predicate="get_advice" type="wh_question"/>
                           <get_done action="advices" />
-                          <!-- <signal_action_completion /> -->
-                          <invoke_service_action name="hypertension_action" postconfirm="true"/>
+                          <inform>
+                            <proposition predicate="diagnosed" value="hyper_done" />
+                          </inform>
+                          <signal_action_completion />
+                          <!-- <invoke_service_action name="hypertension_action" postconfirm="true"/> -->
                         </then>
                       </if>
 
@@ -165,8 +168,12 @@
                             <get_done action="patient_inform" />
                             <invoke_service_query predicate="get_advice" type="wh_question"/>
                             <get_done action="advices" />
-                            <!-- <signal_action_completion /> -->
-                            <invoke_service_action name="migrain_action" postconfirm="true"/>
+                            <signal_action_completion />
+                            <inform>
+                              <proposition predicate="diagnosed" value="diagnosis_done" />
+                            </inform>
+                            <signal_action_completion />
+                            <!-- <invoke_service_action name="migrain_action" postconfirm="true"/> -->
                           </then>
                         </if>
 
@@ -237,8 +244,11 @@
           <get_done action="patient_inform" />
           <invoke_service_query predicate="get_advice" type="wh_question"/>
           <get_done action="advices" />
-          <!-- <signal_action_completion /> -->
-          <invoke_service_action name="bowel_inflammation_action" postconfirm="true"/>
+          <inform>
+            <proposition predicate="diagnosed" value="diagnosis_done" />
+          </inform>
+          <signal_action_completion />
+          <!-- <invoke_service_action name="bowel_inflammation_action" postconfirm="true"/> -->
         </then>
       </if>
      
@@ -275,8 +285,11 @@
                   <get_done action="patient_inform" />
                   <invoke_service_query predicate="get_advice" type="wh_question"/>
                   <get_done action="advices" />
-                  <!-- <signal_action_completion /> -->
-                  <invoke_service_action name="drug_diarrhea_action" postconfirm="true"/>
+                  <inform>
+                    <proposition predicate="diagnosed" value="diagnosis_done" />
+                  </inform>
+                  <signal_action_completion />
+                  <!-- <invoke_service_action name="drug_diarrhea_action" postconfirm="true"/> -->
                 </then>
               </if>
             </then>
@@ -297,13 +310,21 @@
 
   <goal type="perform" action="stomach_ulcer_action">
     <plan>
-     
+      
+      <inform>
+        <proposition predicate="diagnosed" value="diagnosis_done" />
+      </inform>
+      <signal_action_completion />
     </plan>
   </goal>
 
   <goal type="perform" action="gallstones_action">
     <plan>
-     
+      
+      <inform>
+        <proposition predicate="diagnosed" value="diagnosis_done" />
+      </inform>
+      <signal_action_completion />
     </plan>
   </goal>
 
