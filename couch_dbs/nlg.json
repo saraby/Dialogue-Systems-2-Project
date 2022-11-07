@@ -16,12 +16,16 @@
         "utterance": "as for the medications, @prescribe"
     },
     {
-        "match": "ask(?extra_symptoms)",
-        "utterance": "Any other or even new symptoms lately?|Could you please mention what extra symptoms you have if any?"
+        "match": "ask(?X.extra_symptoms(X))",
+        "utterance": "Could you please describe what extra symptoms you have if any?"
     },
     {
-        "match": "ask(?high_pressure)",
-        "utterance": "Could you please measure your blood pressure and tell me what you get?|measure your blood pressure and give the result to me, please!"
+        "match": "ask(?X.high_pressure(X))",
+        "utterance": "Could you please measure your blood pressure and come back to me first with the systolic/high number?|measure your blood pressure and give the systolic/high number to me, please!"
+    },
+    {
+        "match": "ask(?X.low_pressure(X))",
+        "utterance": "Now the diastolic/low number, please"
     },
     {
         "match": "ask(?by_sound_light)",
@@ -60,11 +64,11 @@
         "utterance": "Have you been taking any new medication lately?"
     },
     {
-        "match": "report(action_status(patient_inform, done))",
+        "match": "answer(prescribe(&individual))",
         "utterance": "Great! let's continue then."
     },
     {
-        "match": "report(action_status(advices, done))",
-        "utterance": "Now!"
+        "match": "['icm:acc*pos', 'icm:loadplan']",
+        "utterance":"let's take the next patient then, what are you suffering from?"
     }
 ]

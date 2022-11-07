@@ -21,7 +21,7 @@
 
     <query name="blood_pressure">
         <parameters>
-            <parameter predicate="low_pressure" format="value"/>
+            <!-- <parameter predicate="low_pressure" format="value"/> -->
             <parameter predicate="high_pressure" format="value"/>
         </parameters>
         <target>

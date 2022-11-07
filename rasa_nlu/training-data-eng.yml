@@ -58,7 +58,10 @@ nlu:
     - [stomachache]{"entity": "sort.symptom", "value": "individual.stomachache"}
     - [no appetite]{"entity": "sort.symptom", "value": "individual.no_appetite"}
     - [have appetite]{"entity": "sort.symptom", "value": "individual.with_appetite"}
-    - [Watery and the colour is normal light brown]{"entity": "sort.symptom", "value": "individual.watery_brown"}
+    - [Watery and the color is normal light brown]{"entity": "sort.symptom", "value": "individual.watery_brown"}
+    - [Watery and the color is brown]{"entity": "sort.symptom", "value": "individual.watery_brown"}
+    - [Watery and brown]{"entity": "sort.symptom", "value": "individual.watery_brown"}
+    - [Watery and normal light brown]{"entity": "sort.symptom", "value": "individual.watery_brown"}
     - 0
     - 99
     - 1224
@@ -118,212 +121,212 @@ nlu:
     - I currently work as [an informatics engineer]{"entity": "sort.data", "value": "individual.it_related"}
     - I currently work as [an it support]{"entity": "sort.data", "value": "individual.it_related"}
     - I currently work as [in a call center]{"entity": "sort.data", "value": "individual.call_center"}
-    - [Watery and the colour is normal light brown]{"entity": "sort.symptom", "value": "individual.watery_brown"}
-    - [agitated]{"entity": "sort.symptom", "value": "individual.agitated"}
-    - [have appetite]{"entity": "sort.symptom", "value": "individual.with_appetite"}
-    - [left side]{"entity": "sort.symptom", "value": "individual.one_sided"}
+    - [Watery and brown]{"entity": "sort.symptom", "value": "individual.watery_brown"}
+    - [Watery and normal light brown]{"entity": "sort.symptom", "value": "individual.watery_brown"}
+    - [Watery and the color is brown]{"entity": "sort.symptom", "value": "individual.watery_brown"}
+    - [Watery and the color is normal light brown]{"entity": "sort.symptom", "value": "individual.watery_brown"}
+    - [exhausted]{"entity": "sort.symptom", "value": "individual.fatigued"}
+    - [fatigued and exhausted]{"entity": "sort.symptom", "value": "individual.fatigued"}
+    - [fatigued]{"entity": "sort.symptom", "value": "individual.fatigued"}
     - [nausea and diarrhea]{"entity": "sort.symptom", "value": "individual.nausea_diarrhea"}
-    - [right side]{"entity": "sort.symptom", "value": "individual.one_sided"}
-    - [short breaths like my chest is being closed]{"entity": "sort.symptom", "value": "individual.short_breaths"}
-    - [short breaths]{"entity": "sort.symptom", "value": "individual.short_breaths"}
     - [stomach pain]{"entity": "sort.symptom", "value": "individual.stomachache"}
     - [stomachache]{"entity": "sort.symptom", "value": "individual.stomachache"}
+    - I have [agitated]{"entity": "sort.symptom", "value": "individual.agitated"}
+    - I have [fatigued and exhausted]{"entity": "sort.symptom", "value": "individual.fatigued"}
     - I have [fatigued]{"entity": "sort.symptom", "value": "individual.fatigued"}
-    - I have [left side]{"entity": "sort.symptom", "value": "individual.one_sided"}
+    - I have [have appetite]{"entity": "sort.symptom", "value": "individual.with_appetite"}
+    - I have [headache]{"entity": "sort.symptom", "value": "individual.headache"}
     - I have [no appetite]{"entity": "sort.symptom", "value": "individual.no_appetite"}
-    - I have [one side]{"entity": "sort.symptom", "value": "individual.one_sided"}
-    - I have [one sided]{"entity": "sort.symptom", "value": "individual.one_sided"}
-    - I have [right side]{"entity": "sort.symptom", "value": "individual.one_sided"}
     - I have [short breaths like my chest is being closed]{"entity": "sort.symptom", "value": "individual.short_breaths"}
     - I have [short breaths]{"entity": "sort.symptom", "value": "individual.short_breaths"}
     - I have [stomach pain]{"entity": "sort.symptom", "value": "individual.stomachache"}
     - I have [stomachache]{"entity": "sort.symptom", "value": "individual.stomachache"}
-    - I suffer from [Watery and the colour is normal light brown]{"entity": "sort.symptom", "value": "individual.watery_brown"}
+    - I suffer from [have appetite]{"entity": "sort.symptom", "value": "individual.with_appetite"}
+    - I suffer from [headache]{"entity": "sort.symptom", "value": "individual.headache"}
     - I suffer from [left eye and left side of my face]{"entity": "sort.symptom", "value": "individual.eye_face_pain"}
     - I suffer from [left side]{"entity": "sort.symptom", "value": "individual.one_sided"}
+    - I suffer from [nausea and diarrhea]{"entity": "sort.symptom", "value": "individual.nausea_diarrhea"}
     - I suffer from [one eye and one side of my face]{"entity": "sort.symptom", "value": "individual.eye_face_pain"}
     - I suffer from [one side]{"entity": "sort.symptom", "value": "individual.one_sided"}
     - I suffer from [one sided]{"entity": "sort.symptom", "value": "individual.one_sided"}
     - I suffer from [right eye and right side of my face]{"entity": "sort.symptom", "value": "individual.eye_face_pain"}
     - I suffer from [right side]{"entity": "sort.symptom", "value": "individual.one_sided"}
-    - I suffer from [short breaths like my chest is being closed]{"entity": "sort.symptom", "value": "individual.short_breaths"}
-    - I suffer from [short breaths]{"entity": "sort.symptom", "value": "individual.short_breaths"}
+    - I feel [Watery and brown]{"entity": "sort.symptom", "value": "individual.watery_brown"}
+    - I feel [Watery and normal light brown]{"entity": "sort.symptom", "value": "individual.watery_brown"}
+    - I feel [Watery and the color is brown]{"entity": "sort.symptom", "value": "individual.watery_brown"}
+    - I feel [Watery and the color is normal light brown]{"entity": "sort.symptom", "value": "individual.watery_brown"}
+    - I feel [agitated]{"entity": "sort.symptom", "value": "individual.agitated"}
+    - I feel [exhausted]{"entity": "sort.symptom", "value": "individual.fatigued"}
+    - I feel [fatigued and exhausted]{"entity": "sort.symptom", "value": "individual.fatigued"}
+    - I feel [fatigued]{"entity": "sort.symptom", "value": "individual.fatigued"}
     - I feel [have appetite]{"entity": "sort.symptom", "value": "individual.with_appetite"}
-    - I feel [left eye and left side of my face]{"entity": "sort.symptom", "value": "individual.eye_face_pain"}
-    - I feel [left side]{"entity": "sort.symptom", "value": "individual.one_sided"}
-    - I feel [nausea and diarrhea]{"entity": "sort.symptom", "value": "individual.nausea_diarrhea"}
     - I feel [no appetite]{"entity": "sort.symptom", "value": "individual.no_appetite"}
-    - I feel [one eye and one side of my face]{"entity": "sort.symptom", "value": "individual.eye_face_pain"}
-    - I feel [one side]{"entity": "sort.symptom", "value": "individual.one_sided"}
-    - I feel [one sided]{"entity": "sort.symptom", "value": "individual.one_sided"}
-    - I feel [right eye and right side of my face]{"entity": "sort.symptom", "value": "individual.eye_face_pain"}
-    - I feel [right side]{"entity": "sort.symptom", "value": "individual.one_sided"}
     - I am [agitated]{"entity": "sort.symptom", "value": "individual.agitated"}
-    - I am [exhausted]{"entity": "sort.symptom", "value": "individual.fatigued"}
-    - I am [fatigued and exhausted]{"entity": "sort.symptom", "value": "individual.fatigued"}
-    - I am [fatigued]{"entity": "sort.symptom", "value": "individual.fatigued"}
     - I am [have appetite]{"entity": "sort.symptom", "value": "individual.with_appetite"}
     - I am [headache]{"entity": "sort.symptom", "value": "individual.headache"}
+    - I am [left eye and left side of my face]{"entity": "sort.symptom", "value": "individual.eye_face_pain"}
+    - I am [nausea and diarrhea]{"entity": "sort.symptom", "value": "individual.nausea_diarrhea"}
     - I am [no appetite]{"entity": "sort.symptom", "value": "individual.no_appetite"}
     - I am [one eye and one side of my face]{"entity": "sort.symptom", "value": "individual.eye_face_pain"}
-    - I am [short breaths like my chest is being closed]{"entity": "sort.symptom", "value": "individual.short_breaths"}
-    - I am [short breaths]{"entity": "sort.symptom", "value": "individual.short_breaths"}
-    - it is [Watery and the colour is normal light brown]{"entity": "sort.symptom", "value": "individual.watery_brown"}
+    - I am [right eye and right side of my face]{"entity": "sort.symptom", "value": "individual.eye_face_pain"}
+    - I am [stomach pain]{"entity": "sort.symptom", "value": "individual.stomachache"}
+    - I am [stomachache]{"entity": "sort.symptom", "value": "individual.stomachache"}
     - it is [agitated]{"entity": "sort.symptom", "value": "individual.agitated"}
     - it is [have appetite]{"entity": "sort.symptom", "value": "individual.with_appetite"}
-    - it is [headache]{"entity": "sort.symptom", "value": "individual.headache"}
-    - it is [left eye and left side of my face]{"entity": "sort.symptom", "value": "individual.eye_face_pain"}
-    - it is [nausea and diarrhea]{"entity": "sort.symptom", "value": "individual.nausea_diarrhea"}
+    - it is [left side]{"entity": "sort.symptom", "value": "individual.one_sided"}
+    - it is [no appetite]{"entity": "sort.symptom", "value": "individual.no_appetite"}
     - it is [one eye and one side of my face]{"entity": "sort.symptom", "value": "individual.eye_face_pain"}
-    - it is [right eye and right side of my face]{"entity": "sort.symptom", "value": "individual.eye_face_pain"}
-    - it is [stomach pain]{"entity": "sort.symptom", "value": "individual.stomachache"}
-    - it is [stomachache]{"entity": "sort.symptom", "value": "individual.stomachache"}
+    - it is [one side]{"entity": "sort.symptom", "value": "individual.one_sided"}
+    - it is [one sided]{"entity": "sort.symptom", "value": "individual.one_sided"}
+    - it is [right side]{"entity": "sort.symptom", "value": "individual.one_sided"}
+    - it is [short breaths like my chest is being closed]{"entity": "sort.symptom", "value": "individual.short_breaths"}
+    - it is [short breaths]{"entity": "sort.symptom", "value": "individual.short_breaths"}
     - I feel the pain on the [agitated]{"entity": "sort.symptom", "value": "individual.agitated"}
     - I feel the pain on the [exhausted]{"entity": "sort.symptom", "value": "individual.fatigued"}
     - I feel the pain on the [fatigued and exhausted]{"entity": "sort.symptom", "value": "individual.fatigued"}
     - I feel the pain on the [fatigued]{"entity": "sort.symptom", "value": "individual.fatigued"}
     - I feel the pain on the [have appetite]{"entity": "sort.symptom", "value": "individual.with_appetite"}
+    - I feel the pain on the [headache]{"entity": "sort.symptom", "value": "individual.headache"}
     - I feel the pain on the [left side]{"entity": "sort.symptom", "value": "individual.one_sided"}
-    - I feel the pain on the [nausea and diarrhea]{"entity": "sort.symptom", "value": "individual.nausea_diarrhea"}
+    - I feel the pain on the [no appetite]{"entity": "sort.symptom", "value": "individual.no_appetite"}
     - I feel the pain on the [one side]{"entity": "sort.symptom", "value": "individual.one_sided"}
-    - I feel the pain on the [one sided]{"entity": "sort.symptom", "value": "individual.one_sided"}
     - I feel the pain on the [right side]{"entity": "sort.symptom", "value": "individual.one_sided"}
-    - it hits on the [have appetite]{"entity": "sort.symptom", "value": "individual.with_appetite"}
-    - it hits on the [left side]{"entity": "sort.symptom", "value": "individual.one_sided"}
-    - it hits on the [nausea and diarrhea]{"entity": "sort.symptom", "value": "individual.nausea_diarrhea"}
-    - it hits on the [one side]{"entity": "sort.symptom", "value": "individual.one_sided"}
-    - it hits on the [one sided]{"entity": "sort.symptom", "value": "individual.one_sided"}
-    - it hits on the [right side]{"entity": "sort.symptom", "value": "individual.one_sided"}
+    - it hits on the [Watery and brown]{"entity": "sort.symptom", "value": "individual.watery_brown"}
+    - it hits on the [Watery and normal light brown]{"entity": "sort.symptom", "value": "individual.watery_brown"}
+    - it hits on the [Watery and the color is brown]{"entity": "sort.symptom", "value": "individual.watery_brown"}
+    - it hits on the [Watery and the color is normal light brown]{"entity": "sort.symptom", "value": "individual.watery_brown"}
+    - it hits on the [agitated]{"entity": "sort.symptom", "value": "individual.agitated"}
+    - it hits on the [no appetite]{"entity": "sort.symptom", "value": "individual.no_appetite"}
     - it hits on the [short breaths like my chest is being closed]{"entity": "sort.symptom", "value": "individual.short_breaths"}
     - it hits on the [short breaths]{"entity": "sort.symptom", "value": "individual.short_breaths"}
     - it hits on the [stomach pain]{"entity": "sort.symptom", "value": "individual.stomachache"}
     - it hits on the [stomachache]{"entity": "sort.symptom", "value": "individual.stomachache"}
-    - I feel on the [agitated]{"entity": "sort.symptom", "value": "individual.agitated"}
     - I feel on the [exhausted]{"entity": "sort.symptom", "value": "individual.fatigued"}
     - I feel on the [fatigued and exhausted]{"entity": "sort.symptom", "value": "individual.fatigued"}
     - I feel on the [fatigued]{"entity": "sort.symptom", "value": "individual.fatigued"}
     - I feel on the [have appetite]{"entity": "sort.symptom", "value": "individual.with_appetite"}
-    - I feel on the [left eye and left side of my face]{"entity": "sort.symptom", "value": "individual.eye_face_pain"}
-    - I feel on the [no appetite]{"entity": "sort.symptom", "value": "individual.no_appetite"}
-    - I feel on the [one eye and one side of my face]{"entity": "sort.symptom", "value": "individual.eye_face_pain"}
-    - I feel on the [right eye and right side of my face]{"entity": "sort.symptom", "value": "individual.eye_face_pain"}
+    - I feel on the [headache]{"entity": "sort.symptom", "value": "individual.headache"}
+    - I feel on the [nausea and diarrhea]{"entity": "sort.symptom", "value": "individual.nausea_diarrhea"}
+    - I feel on the [short breaths like my chest is being closed]{"entity": "sort.symptom", "value": "individual.short_breaths"}
+    - I feel on the [short breaths]{"entity": "sort.symptom", "value": "individual.short_breaths"}
     - I feel on the [stomach pain]{"entity": "sort.symptom", "value": "individual.stomachache"}
-    - usually I can feel it [Watery and the colour is normal light brown]{"entity": "sort.symptom", "value": "individual.watery_brown"}
-    - usually I can feel it [agitated]{"entity": "sort.symptom", "value": "individual.agitated"}
+    - I feel on the [stomachache]{"entity": "sort.symptom", "value": "individual.stomachache"}
     - usually I can feel it [exhausted]{"entity": "sort.symptom", "value": "individual.fatigued"}
     - usually I can feel it [fatigued and exhausted]{"entity": "sort.symptom", "value": "individual.fatigued"}
     - usually I can feel it [fatigued]{"entity": "sort.symptom", "value": "individual.fatigued"}
-    - usually I can feel it [left side]{"entity": "sort.symptom", "value": "individual.one_sided"}
+    - usually I can feel it [have appetite]{"entity": "sort.symptom", "value": "individual.with_appetite"}
+    - usually I can feel it [left eye and left side of my face]{"entity": "sort.symptom", "value": "individual.eye_face_pain"}
+    - usually I can feel it [nausea and diarrhea]{"entity": "sort.symptom", "value": "individual.nausea_diarrhea"}
     - usually I can feel it [no appetite]{"entity": "sort.symptom", "value": "individual.no_appetite"}
-    - usually I can feel it [right side]{"entity": "sort.symptom", "value": "individual.one_sided"}
-    - usually I can feel it [stomach pain]{"entity": "sort.symptom", "value": "individual.stomachache"}
-    - usually I can feel it [stomachache]{"entity": "sort.symptom", "value": "individual.stomachache"}
-    - I feel pain in my [Watery and the colour is normal light brown]{"entity": "sort.symptom", "value": "individual.watery_brown"}
-    - I feel pain in my [left eye and left side of my face]{"entity": "sort.symptom", "value": "individual.eye_face_pain"}
-    - I feel pain in my [nausea and diarrhea]{"entity": "sort.symptom", "value": "individual.nausea_diarrhea"}
-    - I feel pain in my [no appetite]{"entity": "sort.symptom", "value": "individual.no_appetite"}
-    - I feel pain in my [one eye and one side of my face]{"entity": "sort.symptom", "value": "individual.eye_face_pain"}
-    - I feel pain in my [right eye and right side of my face]{"entity": "sort.symptom", "value": "individual.eye_face_pain"}
-    - I feel pain in my [short breaths like my chest is being closed]{"entity": "sort.symptom", "value": "individual.short_breaths"}
-    - I feel pain in my [short breaths]{"entity": "sort.symptom", "value": "individual.short_breaths"}
-    - I feel pain in my [stomach pain]{"entity": "sort.symptom", "value": "individual.stomachache"}
-    - I feel pain in my [stomachache]{"entity": "sort.symptom", "value": "individual.stomachache"}
+    - usually I can feel it [one eye and one side of my face]{"entity": "sort.symptom", "value": "individual.eye_face_pain"}
+    - usually I can feel it [short breaths like my chest is being closed]{"entity": "sort.symptom", "value": "individual.short_breaths"}
+    - usually I can feel it [short breaths]{"entity": "sort.symptom", "value": "individual.short_breaths"}
+    - I feel pain in my [Watery and brown]{"entity": "sort.symptom", "value": "individual.watery_brown"}
+    - I feel pain in my [Watery and normal light brown]{"entity": "sort.symptom", "value": "individual.watery_brown"}
+    - I feel pain in my [Watery and the color is brown]{"entity": "sort.symptom", "value": "individual.watery_brown"}
+    - I feel pain in my [Watery and the color is normal light brown]{"entity": "sort.symptom", "value": "individual.watery_brown"}
+    - I feel pain in my [agitated]{"entity": "sort.symptom", "value": "individual.agitated"}
+    - I feel pain in my [headache]{"entity": "sort.symptom", "value": "individual.headache"}
+    - I feel pain in my [left side]{"entity": "sort.symptom", "value": "individual.one_sided"}
+    - I feel pain in my [one side]{"entity": "sort.symptom", "value": "individual.one_sided"}
+    - I feel pain in my [one sided]{"entity": "sort.symptom", "value": "individual.one_sided"}
+    - I feel pain in my [right side]{"entity": "sort.symptom", "value": "individual.one_sided"}
     - there is a clear pain in the [agitated]{"entity": "sort.symptom", "value": "individual.agitated"}
-    - there is a clear pain in the [exhausted]{"entity": "sort.symptom", "value": "individual.fatigued"}
-    - there is a clear pain in the [fatigued and exhausted]{"entity": "sort.symptom", "value": "individual.fatigued"}
-    - there is a clear pain in the [fatigued]{"entity": "sort.symptom", "value": "individual.fatigued"}
+    - there is a clear pain in the [headache]{"entity": "sort.symptom", "value": "individual.headache"}
     - there is a clear pain in the [left eye and left side of my face]{"entity": "sort.symptom", "value": "individual.eye_face_pain"}
-    - there is a clear pain in the [no appetite]{"entity": "sort.symptom", "value": "individual.no_appetite"}
+    - there is a clear pain in the [left side]{"entity": "sort.symptom", "value": "individual.one_sided"}
+    - there is a clear pain in the [nausea and diarrhea]{"entity": "sort.symptom", "value": "individual.nausea_diarrhea"}
     - there is a clear pain in the [one eye and one side of my face]{"entity": "sort.symptom", "value": "individual.eye_face_pain"}
+    - there is a clear pain in the [one side]{"entity": "sort.symptom", "value": "individual.one_sided"}
+    - there is a clear pain in the [one sided]{"entity": "sort.symptom", "value": "individual.one_sided"}
     - there is a clear pain in the [right eye and right side of my face]{"entity": "sort.symptom", "value": "individual.eye_face_pain"}
-    - there is a clear pain in the [stomach pain]{"entity": "sort.symptom", "value": "individual.stomachache"}
-    - there is a clear pain in the [stomachache]{"entity": "sort.symptom", "value": "individual.stomachache"}
-    - there is pain that hits in [Watery and the colour is normal light brown]{"entity": "sort.symptom", "value": "individual.watery_brown"}
+    - there is a clear pain in the [right side]{"entity": "sort.symptom", "value": "individual.one_sided"}
     - there is pain that hits in [agitated]{"entity": "sort.symptom", "value": "individual.agitated"}
     - there is pain that hits in [have appetite]{"entity": "sort.symptom", "value": "individual.with_appetite"}
+    - there is pain that hits in [headache]{"entity": "sort.symptom", "value": "individual.headache"}
     - there is pain that hits in [left eye and left side of my face]{"entity": "sort.symptom", "value": "individual.eye_face_pain"}
     - there is pain that hits in [nausea and diarrhea]{"entity": "sort.symptom", "value": "individual.nausea_diarrhea"}
     - there is pain that hits in [no appetite]{"entity": "sort.symptom", "value": "individual.no_appetite"}
     - there is pain that hits in [one eye and one side of my face]{"entity": "sort.symptom", "value": "individual.eye_face_pain"}
     - there is pain that hits in [right eye and right side of my face]{"entity": "sort.symptom", "value": "individual.eye_face_pain"}
-    - there is pain that hits in [stomach pain]{"entity": "sort.symptom", "value": "individual.stomachache"}
-    - there is pain that hits in [stomachache]{"entity": "sort.symptom", "value": "individual.stomachache"}
+    - there is pain that hits in [short breaths like my chest is being closed]{"entity": "sort.symptom", "value": "individual.short_breaths"}
+    - there is pain that hits in [short breaths]{"entity": "sort.symptom", "value": "individual.short_breaths"}
     - it started [two days ago]{"entity": "sort.time", "value": "individual.when"}
     - it started [yesterday]{"entity": "sort.time", "value": "individual.when"}
     - I started to feel this way since [two days ago]{"entity": "sort.time", "value": "individual.when"}
     - I started to feel this way since [yesterday]{"entity": "sort.time", "value": "individual.when"}
-    - it is [Watery and the colour is normal light brown]{"entity": "sort.symptom", "value": "individual.watery_brown"}
-    - it is [exhausted]{"entity": "sort.symptom", "value": "individual.fatigued"}
-    - it is [fatigued and exhausted]{"entity": "sort.symptom", "value": "individual.fatigued"}
-    - it is [fatigued]{"entity": "sort.symptom", "value": "individual.fatigued"}
-    - it is [headache]{"entity": "sort.symptom", "value": "individual.headache"}
+    - it is [agitated]{"entity": "sort.symptom", "value": "individual.agitated"}
+    - it is [left eye and left side of my face]{"entity": "sort.symptom", "value": "individual.eye_face_pain"}
     - it is [left side]{"entity": "sort.symptom", "value": "individual.one_sided"}
-    - it is [no appetite]{"entity": "sort.symptom", "value": "individual.no_appetite"}
+    - it is [one eye and one side of my face]{"entity": "sort.symptom", "value": "individual.eye_face_pain"}
     - it is [one side]{"entity": "sort.symptom", "value": "individual.one_sided"}
     - it is [one sided]{"entity": "sort.symptom", "value": "individual.one_sided"}
+    - it is [right eye and right side of my face]{"entity": "sort.symptom", "value": "individual.eye_face_pain"}
     - it is [right side]{"entity": "sort.symptom", "value": "individual.one_sided"}
-    - I noticed that it was [agitated]{"entity": "sort.symptom", "value": "individual.agitated"} times
+    - it is [short breaths like my chest is being closed]{"entity": "sort.symptom", "value": "individual.short_breaths"}
+    - it is [short breaths]{"entity": "sort.symptom", "value": "individual.short_breaths"}
+    - I noticed that it was [exhausted]{"entity": "sort.symptom", "value": "individual.fatigued"} times
+    - I noticed that it was [fatigued and exhausted]{"entity": "sort.symptom", "value": "individual.fatigued"} times
+    - I noticed that it was [fatigued]{"entity": "sort.symptom", "value": "individual.fatigued"} times
     - I noticed that it was [headache]{"entity": "sort.symptom", "value": "individual.headache"} times
     - I noticed that it was [left eye and left side of my face]{"entity": "sort.symptom", "value": "individual.eye_face_pain"} times
-    - I noticed that it was [left side]{"entity": "sort.symptom", "value": "individual.one_sided"} times
+    - I noticed that it was [nausea and diarrhea]{"entity": "sort.symptom", "value": "individual.nausea_diarrhea"} times
     - I noticed that it was [no appetite]{"entity": "sort.symptom", "value": "individual.no_appetite"} times
     - I noticed that it was [one eye and one side of my face]{"entity": "sort.symptom", "value": "individual.eye_face_pain"} times
-    - I noticed that it was [right eye and right side of my face]{"entity": "sort.symptom", "value": "individual.eye_face_pain"} times
-    - I noticed that it was [right side]{"entity": "sort.symptom", "value": "individual.one_sided"} times
-    - I noticed that it was [short breaths like my chest is being closed]{"entity": "sort.symptom", "value": "individual.short_breaths"} times
-    - I noticed that it was [short breaths]{"entity": "sort.symptom", "value": "individual.short_breaths"} times
+    - I noticed that it was [stomach pain]{"entity": "sort.symptom", "value": "individual.stomachache"} times
+    - I noticed that it was [stomachache]{"entity": "sort.symptom", "value": "individual.stomachache"} times
     - my Otolaryngologist prescribed [Clarithromycin]{"entity": "sort.meds", "value": "individual.a_med"} for my year infection
     - its name is[Clarithromycin]{"entity": "sort.meds", "value": "individual.a_med"}
     - it is [Clarithromycin]{"entity": "sort.meds", "value": "individual.a_med"}
     - one of my doctors prescribed [Clarithromycin]{"entity": "sort.meds", "value": "individual.a_med"}
     - yes [headache]{"entity": "sort.symptom", "value": "individual.headache"}
     - yes [one side]{"entity": "sort.symptom", "value": "individual.one_sided"}
-    - yes 0
-    - yes [Try to do what we agreed upon and I hope you get better]{"entity": "sort.is_done", "value": "individual.diagnosis_done"}
-    - yes [would you bring ten or none to a desert island](sort.string)
-    - yes [two days ago]{"entity": "sort.time", "value": "individual.when"}
-    - yes I work [a software developer]{"entity": "sort.data", "value": "individual.it_related"}
-    - yes I am [an it support]{"entity": "sort.data", "value": "individual.it_related"}
-    - yes [agitated]{"entity": "sort.symptom", "value": "individual.agitated"}
-    - yes I have [left side]{"entity": "sort.symptom", "value": "individual.one_sided"}
-    - yes I suffer from [left eye and left side of my face]{"entity": "sort.symptom", "value": "individual.eye_face_pain"}
-    - yes I feel [left eye and left side of my face]{"entity": "sort.symptom", "value": "individual.eye_face_pain"}
-    - yes I am [exhausted]{"entity": "sort.symptom", "value": "individual.fatigued"}
-    - yes it is [agitated]{"entity": "sort.symptom", "value": "individual.agitated"}
-    - yes I feel the pain on the [exhausted]{"entity": "sort.symptom", "value": "individual.fatigued"}
-    - yes it hits on the [left side]{"entity": "sort.symptom", "value": "individual.one_sided"}
-    - yes I feel on the [exhausted]{"entity": "sort.symptom", "value": "individual.fatigued"}
-    - yes usually I can feel it [agitated]{"entity": "sort.symptom", "value": "individual.agitated"}
-    - yes I feel pain in my [left eye and left side of my face]{"entity": "sort.symptom", "value": "individual.eye_face_pain"}
-    - yes there is a clear pain in the [exhausted]{"entity": "sort.symptom", "value": "individual.fatigued"}
-    - yes there is pain that hits in [agitated]{"entity": "sort.symptom", "value": "individual.agitated"}
-    - yes it started [yesterday]{"entity": "sort.time", "value": "individual.when"}
+    - yes [Watery and the color is brown]{"entity": "sort.symptom", "value": "individual.watery_brown"}
+    - yes [risk groub]{"entity": "sort.category", "value": "individual.risk_group"}
+    - yes [bring them through to the jolly seven](sort.string)
+    - yes [a journalist]{"entity": "sort.data", "value": "individual.journalist"}
+    - yes I work as [in a call center]{"entity": "sort.data", "value": "individual.call_center"}
+    - yes I am [a software developer]{"entity": "sort.data", "value": "individual.it_related"}
+    - yes I currently work as [an it support]{"entity": "sort.data", "value": "individual.it_related"}
+    - yes [stomach pain]{"entity": "sort.symptom", "value": "individual.stomachache"}
+    - yes I have [stomach pain]{"entity": "sort.symptom", "value": "individual.stomachache"}
+    - yes I suffer from [right eye and right side of my face]{"entity": "sort.symptom", "value": "individual.eye_face_pain"}
+    - yes I feel [have appetite]{"entity": "sort.symptom", "value": "individual.with_appetite"}
+    - yes I am [stomach pain]{"entity": "sort.symptom", "value": "individual.stomachache"}
+    - yes it is [short breaths like my chest is being closed]{"entity": "sort.symptom", "value": "individual.short_breaths"}
+    - yes I feel the pain on the [one side]{"entity": "sort.symptom", "value": "individual.one_sided"}
+    - yes it hits on the [stomach pain]{"entity": "sort.symptom", "value": "individual.stomachache"}
+    - yes I feel on the [stomach pain]{"entity": "sort.symptom", "value": "individual.stomachache"}
+    - yes usually I can feel it [short breaths like my chest is being closed]{"entity": "sort.symptom", "value": "individual.short_breaths"}
+    - yes I feel pain in my [one sided]{"entity": "sort.symptom", "value": "individual.one_sided"}
+    - yes there is a clear pain in the [right eye and right side of my face]{"entity": "sort.symptom", "value": "individual.eye_face_pain"}
+    - yes there is pain that hits in [short breaths like my chest is being closed]{"entity": "sort.symptom", "value": "individual.short_breaths"}
     - yes it is [one side]{"entity": "sort.symptom", "value": "individual.one_sided"}
-    - yes I noticed that it was [right side]{"entity": "sort.symptom", "value": "individual.one_sided"} times
+    - yes I noticed that it was [left eye and left side of my face]{"entity": "sort.symptom", "value": "individual.eye_face_pain"} times
     - no [short breaths]{"entity": "sort.symptom", "value": "individual.short_breaths"}
     - no [one sided]{"entity": "sort.symptom", "value": "individual.one_sided"}
-    - no 99
-    - no [single](sort.string)
-    - no [an accountant]{"entity": "sort.data", "value": "individual.accountant"}
-    - no I work as [a journalist]{"entity": "sort.data", "value": "individual.journalist"}
-    - no I work [an accountant]{"entity": "sort.data", "value": "individual.accountant"}
-    - no I am [in a call center]{"entity": "sort.data", "value": "individual.call_center"}
-    - no [have appetite]{"entity": "sort.symptom", "value": "individual.with_appetite"}
-    - no I have [no appetite]{"entity": "sort.symptom", "value": "individual.no_appetite"}
-    - no I suffer from [left side]{"entity": "sort.symptom", "value": "individual.one_sided"}
-    - no I feel [left side]{"entity": "sort.symptom", "value": "individual.one_sided"}
-    - no I am [fatigued and exhausted]{"entity": "sort.symptom", "value": "individual.fatigued"}
-    - no it is [have appetite]{"entity": "sort.symptom", "value": "individual.with_appetite"}
-    - no I feel the pain on the [fatigued and exhausted]{"entity": "sort.symptom", "value": "individual.fatigued"}
-    - no it hits on the [nausea and diarrhea]{"entity": "sort.symptom", "value": "individual.nausea_diarrhea"}
-    - no I feel on the [fatigued and exhausted]{"entity": "sort.symptom", "value": "individual.fatigued"}
-    - no usually I can feel it [exhausted]{"entity": "sort.symptom", "value": "individual.fatigued"}
-    - no I feel pain in my [nausea and diarrhea]{"entity": "sort.symptom", "value": "individual.nausea_diarrhea"}
-    - no there is a clear pain in the [fatigued and exhausted]{"entity": "sort.symptom", "value": "individual.fatigued"}
-    - no there is pain that hits in [have appetite]{"entity": "sort.symptom", "value": "individual.with_appetite"}
-    - no I started to feel this way since [two days ago]{"entity": "sort.time", "value": "individual.when"}
+    - no [Watery and brown]{"entity": "sort.symptom", "value": "individual.watery_brown"}
+    - no [low]{"entity": "sort.level", "value": "individual.low"}
+    - no [noone counts toes like an eight toed guy](sort.string)
+    - no [Clarithromycin]{"entity": "sort.meds", "value": "individual.a_med"}
+    - no I work [a journalist]{"entity": "sort.data", "value": "individual.journalist"}
+    - no I am [an accountant]{"entity": "sort.data", "value": "individual.accountant"}
+    - no I currently work as [in a call center]{"entity": "sort.data", "value": "individual.call_center"}
+    - no [stomachache]{"entity": "sort.symptom", "value": "individual.stomachache"}
+    - no I have [stomachache]{"entity": "sort.symptom", "value": "individual.stomachache"}
+    - no I suffer from [right side]{"entity": "sort.symptom", "value": "individual.one_sided"}
+    - no I feel [no appetite]{"entity": "sort.symptom", "value": "individual.no_appetite"}
+    - no I am [stomachache]{"entity": "sort.symptom", "value": "individual.stomachache"}
+    - no it is [short breaths]{"entity": "sort.symptom", "value": "individual.short_breaths"}
+    - no I feel the pain on the [right side]{"entity": "sort.symptom", "value": "individual.one_sided"}
+    - no it hits on the [stomachache]{"entity": "sort.symptom", "value": "individual.stomachache"}
+    - no I feel on the [stomachache]{"entity": "sort.symptom", "value": "individual.stomachache"}
+    - no usually I can feel it [short breaths]{"entity": "sort.symptom", "value": "individual.short_breaths"}
+    - no I feel pain in my [right side]{"entity": "sort.symptom", "value": "individual.one_sided"}
+    - no there is a clear pain in the [right side]{"entity": "sort.symptom", "value": "individual.one_sided"}
+    - no there is pain that hits in [short breaths]{"entity": "sort.symptom", "value": "individual.short_breaths"}
     - no it is [one sided]{"entity": "sort.symptom", "value": "individual.one_sided"}
-    - no I noticed that it was [short breaths like my chest is being closed]{"entity": "sort.symptom", "value": "individual.short_breaths"} times
+    - no I noticed that it was [nausea and diarrhea]{"entity": "sort.symptom", "value": "individual.nausea_diarrhea"} times
 
 - intent: answer_negation
   examples: |
@@ -346,7 +349,10 @@ nlu:
     - not [stomachache]{"entity": "sort.symptom", "value": "individual.stomachache"}
     - not [no appetite]{"entity": "sort.symptom", "value": "individual.no_appetite"}
     - not [have appetite]{"entity": "sort.symptom", "value": "individual.with_appetite"}
-    - not [Watery and the colour is normal light brown]{"entity": "sort.symptom", "value": "individual.watery_brown"}
+    - not [Watery and the color is normal light brown]{"entity": "sort.symptom", "value": "individual.watery_brown"}
+    - not [Watery and the color is brown]{"entity": "sort.symptom", "value": "individual.watery_brown"}
+    - not [Watery and brown]{"entity": "sort.symptom", "value": "individual.watery_brown"}
+    - not [Watery and normal light brown]{"entity": "sort.symptom", "value": "individual.watery_brown"}
     - not 0
     - not 99
     - not 1224
@@ -568,6 +574,10 @@ nlu:
     - it's done now
     - okay next
     - next
+    - aha
+    - OK
+    - hmm
+    - yes
     - I understand
     - alright
     - okay

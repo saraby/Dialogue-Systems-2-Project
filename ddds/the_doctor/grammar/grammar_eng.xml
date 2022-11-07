@@ -117,6 +117,11 @@
 
       <item>my pressure is <slot predicate="high_pressure"/> over <slot predicate="low_pressure"/></item>
       <item>it is <slot predicate="high_pressure"/> over <slot predicate="low_pressure"/></item>
+      <item>it is <slot predicate="high_pressure"/> </item>
+      <item>I can see that my systolic blood pressure is <slot predicate="high_pressure"/> </item>
+      <item>it is <slot predicate="low_pressure"/> </item>
+      <item>I can see that my diastolic blood pressure is <slot predicate="low_pressure"/> </item>
+
       
       <item>about <slot predicate="num_defecate"/> times</item>
       <item>maybe <slot predicate="num_defecate"/> times</item>
@@ -196,7 +201,15 @@
   <individual name="high">high</individual>
   <individual name="no_appetite">no appetite</individual>
   <individual name="with_appetite">have appetite</individual>
-  <individual name="watery_brown">Watery and the colour is normal light brown</individual>
+  <individual name="watery_brown">
+    <one-of>
+      <item>Watery and the color is normal light brown</item>
+      <item>Watery and the color is brown</item>
+      <item>Watery and brown</item>
+      <item>Watery and normal light brown</item>
+
+    </one-of>
+  </individual>
   <individual name="when">
     <one-of>
       <item>yesterday</item>

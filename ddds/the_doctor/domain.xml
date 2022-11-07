@@ -41,17 +41,18 @@
                 <proposition predicate="by_sound_light" value="false"/>
                 <then>
                   <jumpto type="perform" action="hypertension_action"/>
+                  <!-- <signal_action_completion /> -->
                 </then>
                 <else>
                   <assume_shared>
                     <proposition predicate="sound_light" value="agitated" />
                   </assume_shared>
                   <jumpto type="perform" action="migrain_action"/>
+                  <!-- <signal_action_completion /> -->
                 </else>
               </if>
             </then>
           </if>
-          
 
         </then>
       </if>
@@ -86,7 +87,7 @@
                 <then> 
                   <findout type="wh_question" predicate="extra_symptoms" />
                   <findout type="wh_question" predicate="high_pressure" />
-                  <bind type="wh_question" predicate="low_pressure" />
+                  <findout type="wh_question" predicate="low_pressure" />
                   <invoke_service_query predicate="blood_pressure" type="wh_question"/>
 
                   <if>
@@ -105,8 +106,9 @@
                           <invoke_service_query predicate="get_advice" type="wh_question"/>
                           <get_done action="advices" />
                           <inform>
-                            <proposition predicate="diagnosed" value="hyper_done" />
+                            <proposition predicate="diagnosed" value="diagnosis_done" />
                           </inform>
+                          <jumpto type="perform" action="top"/>
                           <signal_action_completion />
                           <!-- <invoke_service_action name="hypertension_action" postconfirm="true"/> -->
                         </then>
@@ -168,12 +170,17 @@
                             <get_done action="patient_inform" />
                             <invoke_service_query predicate="get_advice" type="wh_question"/>
                             <get_done action="advices" />
-                            <signal_action_completion />
                             <inform>
                               <proposition predicate="diagnosed" value="diagnosis_done" />
                             </inform>
-                            <signal_action_completion />
-                            <!-- <invoke_service_action name="migrain_action" postconfirm="true"/> -->
+                            <!-- <if>
+                              <proposition predicate="diagnosed" value="diagnosis_done" />
+                              <then>
+                                <jumpto type="perform" action="top"/>
+                              </then>
+                            </if> -->
+                            
+                            
                           </then>
                         </if>
 
@@ -188,6 +195,8 @@
 
         </then>
       </if>
+      <jumpto type="perform" action="top"/>
+      <signal_action_completion />
     </plan>
   </goal>
   
@@ -320,7 +329,7 @@
 
   <goal type="perform" action="gallstones_action">
     <plan>
-      
+
       <inform>
         <proposition predicate="diagnosed" value="diagnosis_done" />
       </inform>
