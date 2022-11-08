@@ -30,7 +30,7 @@
         "prescriptions": "take 40mg Omeprazole once a day and that would be half an hour before breakfast"
     },
     "Gallstones": {
-        "symptoms":["stomachache","burning_sensation","nausea_belching","orange_urine"],
+        "symptoms":["stomachache","nausea_belching","orange_urine"],
         "inform":"you probably have a condition called Gallstones.",
         "advices": "drink as much water and clear fluids as you can until your body ejects it out. Nothing to worry about.",
         "prescriptions": "we recommend you take Ciprofloxacin 500mg 2 times/day for 10 days if you feel any rise in your temperature."

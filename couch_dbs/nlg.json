@@ -52,6 +52,14 @@
         "utterance": "Are the lights in your workplace brighter than normal? or does it annoy you when you are home when the children are playing or yelling?"
     },
     {
+        "match": "ask(?has_stomachache)",
+        "utterance": "Is there any stomachache?"
+    },
+    {
+        "match": "ask(?fast_food)",
+        "utterance": "Have you eaten fast food or outside lately?"
+    },
+    {
         "match": "ask(?has_appetite)",
         "utterance": "Do you have any appetite for food?"
     },
@@ -61,7 +69,19 @@
     },
     {
         "match": "ask(?taking_meds)",
-        "utterance": "Have you been taking any new medication lately?"
+        "utterance": "Have you been taking any new medication lately, like Clarithromycin?"
+    },
+    {
+        "match": "ask(?has_burning_sensation)",
+        "utterance": "Is there a burning sensation in your chest?"
+    },
+    {
+        "match": "ask(?is_belching)",
+        "utterance": "Do you suffer from nausea or belching?"
+    },
+    {
+        "match": "ask(?has_probs)",
+        "utterance": "Any problems with your defecation/gases?"
     },
     {
         "match": "answer(prescribe(&individual))",

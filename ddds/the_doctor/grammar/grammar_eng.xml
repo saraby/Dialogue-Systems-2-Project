@@ -73,6 +73,8 @@
   <question speaker="system" predicate="defecate_texture" type="wh_question">Is the texture watery or loose and what colour is it</question>
   <question speaker="system" predicate="what_meds" type="wh_question">Do you recall the name of it</question>
   <question speaker="system" predicate="meds_days" type="wh_question">how many days have you been taking this medication</question>
+  <question speaker="system" predicate="burn_reaction" type="wh_question">Does the burn and pain increase or decrease after food ingestion</question>
+  <question speaker="system" predicate="urine_color" type="wh_question">What colour is your urine</question>
   
   
   <question speaker="user" predicate="prescribe" type="wh_question">
@@ -113,7 +115,10 @@
       <item>there is pain that hits in <slot predicate="additional_pain"/></item>
 
       <item>it started <slot predicate="when_started"/></item>
-      <item>I started to feel this way since <slot predicate="when_started"/></item>
+      <item>since <slot predicate="when_started"/></item>
+      <item>since <slot predicate="when_started"/> ago</item>
+      <item>I started to feel this way since <slot predicate="when_started"/> ago </item>
+      <item>the last <slot predicate="when_started"/> it increased substantially </item>
 
       <item>my pressure is <slot predicate="high_pressure"/> over <slot predicate="low_pressure"/></item>
       <item>it is <slot predicate="high_pressure"/> over <slot predicate="low_pressure"/></item>
@@ -137,7 +142,14 @@
       <item>for <slot predicate="meds_days"/> days </item>
       <item>since <slot predicate="meds_days"/> days ago </item>
       <item>I have been taking it for <slot predicate="meds_days"/> days </item>
-      
+
+      <item>it is <slot predicate="burn_reaction"/> </item>
+      <item>it <slot predicate="burn_reaction"/> </item>
+      <item>it actually <slot predicate="burn_reaction"/> </item>
+      <item>it would <slot predicate="burn_reaction"/> </item>
+
+      <item>it is <slot predicate="urine_color"/></item>
+      <item>a little <slot predicate="urine_color"/></item>
 
     </one-of>
   </answer>
@@ -201,22 +213,47 @@
   <individual name="high">high</individual>
   <individual name="no_appetite">no appetite</individual>
   <individual name="with_appetite">have appetite</individual>
+  <individual name="burning_sensation">burns</individual>
+  <individual name="nausea_belching">belching</individual>
+  <individual name="increase">
+    <one-of>
+      <item>increase</item>
+      <item>increases</item>
+      <item>increased</item>
+      <item>increasing</item>
+    </one-of>
+  </individual>
+  <individual name="decrease">
+    <one-of>
+      <item>decrease</item>
+      <item>decreases</item>
+      <item>decreased</item>
+      <item>decreasing</item>
+    </one-of>
+  </individual>
   <individual name="watery_brown">
     <one-of>
       <item>Watery and the color is normal light brown</item>
       <item>Watery and the color is brown</item>
       <item>Watery and brown</item>
       <item>Watery and normal light brown</item>
-
     </one-of>
   </individual>
   <individual name="when">
     <one-of>
       <item>yesterday</item>
       <item>two days ago</item>
+      <item>two weeks ago</item>
     </one-of>
   </individual>
   <individual name="a_med">Clarithromycin</individual>
+  <individual name="orange_urine">
+    <one-of>
+      <item>yellow to orange</item>
+      <item>orange</item>
+      <item>between yellow and orange</item>
+    </one-of>
+  </individual>
 
   <individual name="diagnosis_done">Try to do what we agreed upon and I hope you get better</individual>
 

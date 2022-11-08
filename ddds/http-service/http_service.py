@@ -194,6 +194,18 @@ def blood_pressure():
         blood_pressure = "high"
         
     return query_response(value=blood_pressure, grammar_entry=None)
+  
+
+@app.route("/lately", methods=['POST'])
+def lately():
+    payload = request.get_json()
+    started = payload["context"]["facts"]["when_started"]["grammar_entry"]
+    if "week" in started:
+      lately = False
+    else:
+      lately = True
+
+    return query_response(value=lately, grammar_entry=None)
 
 
 @app.route("/diagnosis", methods=['POST'])
@@ -240,20 +252,16 @@ def prescribe():
     print(3*"\n", payload, 3*"\n")
     get_diagnosis = payload["context"]["facts"]["diagnosis"]["value"]
     medication = MC[get_diagnosis]["prescriptions"]
-    # if not medication :
-    #   prescribe = "There is no prescriptions for your case of" + \
-    #     get_diagnosis + "just stick to what I have adviced you to do"
-    # else:
-    prescribe = medication
+    if not medication :
+      prescribe = "There is no prescriptions for your case of " + \
+        get_diagnosis + ", just stick to what I have adviced you to do"
+    else:
+      prescribe = medication
 
     return query_response(value=prescribe, grammar_entry=None)
+  
 
 
-@app.route("/prescriptions_available", methods=['POST'])
-def prescriptions_available():
-    payload = request.get_json()
-    get_diagnosis = payload["context"]["facts"]["diagnosis"]["value"]
-    if MC[get_diagnosis]["prescriptions"] is None:
-        return validator_response(is_valid=False)
-    return validator_response(is_valid=True)
+
+
   

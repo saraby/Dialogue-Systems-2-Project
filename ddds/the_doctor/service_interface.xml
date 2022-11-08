@@ -29,6 +29,15 @@
         </target>
     </query>
 
+    <query name="lately">
+        <parameters>
+            <parameter predicate="when_started" format="value"/>
+        </parameters>
+        <target>
+            <http endpoint="http://ddds-http-service/lately"/>
+        </target>
+    </query>
+
     <query name="diagnosis">
         <parameters>
             <parameter predicate="main_symptoms" format="value"/>
@@ -65,13 +74,13 @@
         </target>
     </query>
 
-    <validator name="PrescriptionsAvailable">
+    <!-- <validator name="PrescriptionsAvailable">
         <parameters>
             <parameter predicate="diagnosis" format="value"/>
         </parameters>
         <target>
             <http endpoint="http://ddds-http-service/prescriptions_available"/>
         </target>
-    </validator>
+    </validator> -->
 
 </service_interface>

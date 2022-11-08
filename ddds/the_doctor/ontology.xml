@@ -41,6 +41,11 @@
     <predicate name="has_appetite" sort="boolean"/>
     <predicate name="has_vomitting" sort="boolean"/>
     <predicate name="taking_meds" sort="boolean"/>
+    <predicate name="lately" sort="boolean"/>
+    <predicate name="has_burning_sensation" sort="boolean"/>
+    <predicate name="is_belching" sort="boolean"/>
+    <predicate name="has_probs" sort="boolean"/>
+
 
     <predicate name="main_symptoms" sort="symptom"/>
     <predicate name="sound_light" sort="symptom"/>
@@ -50,12 +55,15 @@
     <predicate name="additional_pain" sort="symptom"/>
     <predicate name="defecate_texture" sort="symptom"/>
     <predicate name="appetite" sort="symptom"/>
+    <predicate name="urine_color" sort="symptom"/>
+ 
 
     <predicate name="age_category" sort="category"/>
 
     <predicate name="occupation" sort="data"/>
 
     <predicate name="blood_pressure" sort="level"/>
+    <predicate name="burn_reaction" sort="level"/>
 
     <predicate name="when_started" sort="time"/>
 
@@ -87,6 +95,11 @@
     <individual name="no_appetite" sort="symptom"/>
     <individual name="with_appetite" sort="symptom"/>
     <individual name="watery_brown" sort="symptom"/>
+    <individual name="burning_sensation" sort="symptom"/>
+    <individual name="nausea_belching" sort="symptom"/>
+    <individual name="orange_urine" sort="symptom"/>
+
+    
 
     <individual name="young" sort="category"/>
     <individual name="risk_group" sort="category"/>
@@ -98,12 +111,14 @@
 
     <individual name="low" sort="level"/>
     <individual name="high" sort="level"/>
+    <individual name="increase" sort="level"/>
+    <individual name="decrease" sort="level"/>
 
     <individual name="when" sort="time"/>
     <individual name="a_med" sort="meds"/>
     
     <individual name="diagnosis_done" sort="is_done"/>
-    
+
     <!-- <individual name="hypertension" sort="condition"/>
     <individual name="migrain" sort="condition"/>
     <individual name="bowel_inf" sort="condition"/>

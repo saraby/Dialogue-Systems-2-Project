@@ -173,6 +173,7 @@
                             <inform>
                               <proposition predicate="diagnosed" value="diagnosis_done" />
                             </inform>
+                            
                             <!-- <if>
                               <proposition predicate="diagnosed" value="diagnosis_done" />
                               <then>
@@ -207,33 +208,44 @@
       </assume_shared>
       <findout type="wh_question" predicate="extra_symptoms" />
       <findout type="wh_question" predicate="when_started" />
-      <findout type="wh_question" predicate="num_defecate" />
-      <findout type="wh_question" predicate="defecate_texture" />
-      <findout type="yn_question" >
-         <proposition predicate="has_stomachache" />
-      </findout>
+      <invoke_service_query type="yn_question">
+        <proposition predicate="lately"/>
+      </invoke_service_query>
       <if>
-        <proposition predicate="has_stomachache"/>
+        <proposition predicate="lately"/>
         <then>
-          <assume_shared>
-            <proposition predicate="additional_pain" value="stomachache" />
-          </assume_shared>
+          <findout type="wh_question" predicate="num_defecate" />
+          <findout type="wh_question" predicate="defecate_texture" />
           <findout type="yn_question" >
-            <proposition predicate="fast_food" />
+            <proposition predicate="has_stomachache" />
           </findout>
-
           <if>
-            <proposition predicate="fast_food"/>
+            <proposition predicate="has_stomachache" />
             <then>
-              <jumpto type="perform" action="bowel_inflammation_action"/>
+              <assume_shared>
+                <proposition predicate="additional_pain" value="stomachache" />
+              </assume_shared>
+              <findout type="yn_question" >
+                <proposition predicate="fast_food" />
+              </findout>
+
+              <if>
+                <proposition predicate="fast_food"/>
+                <then>
+                  <jumpto type="perform" action="bowel_inflammation_action"/>
+                </then>
+                <else>
+                  <jumpto type="perform" action="drug_diarrhea_action"/>
+                </else>
+              </if>
+
             </then>
-            <else>
-              <jumpto type="perform" action="drug_diarrhea_action"/>
-            </else>
           </if>
 
         </then>
       </if>
+      
+      <signal_action_completion />
     </plan>
   </goal>
 
@@ -256,11 +268,11 @@
           <inform>
             <proposition predicate="diagnosed" value="diagnosis_done" />
           </inform>
-          <signal_action_completion />
           <!-- <invoke_service_action name="bowel_inflammation_action" postconfirm="true"/> -->
         </then>
       </if>
-     
+      <jumpto type="perform" action="top"/>
+      <signal_action_completion />
     </plan>
   </goal>
 
@@ -297,7 +309,6 @@
                   <inform>
                     <proposition predicate="diagnosed" value="diagnosis_done" />
                   </inform>
-                  <signal_action_completion />
                   <!-- <invoke_service_action name="drug_diarrhea_action" postconfirm="true"/> -->
                 </then>
               </if>
@@ -305,6 +316,8 @@
           </if>
         </then>
       </if>
+      <jumpto type="perform" action="top"/>
+      <signal_action_completion />
     </plan>
   </goal>
 
@@ -313,26 +326,103 @@
       <assume_shared>
         <proposition predicate="main_symptoms" value="stomachache" />
       </assume_shared>
-      
+      <findout type="wh_question" predicate="when_started" />
+      <invoke_service_query type="yn_question">
+        <proposition predicate="lately"/>
+      </invoke_service_query>
+      <if>
+        <proposition predicate="lately"/>
+        <then>
+          <findout type="yn_question" >
+            <proposition predicate="has_burning_sensation" />
+          </findout>
+          <if>
+            <proposition predicate="has_burning_sensation" />
+            <then>
+              <jumpto type="perform" action="stomach_ulcer_action"/>
+            </then>
+            <else>
+              <jumpto type="perform" action="gallstones_action"/>
+            </else>
+          </if>
+
+        </then>
+      </if>
+
+      <signal_action_completion />
     </plan>
   </goal>
 
   <goal type="perform" action="stomach_ulcer_action">
     <plan>
-      
-      <inform>
-        <proposition predicate="diagnosed" value="diagnosis_done" />
-      </inform>
+      <assume_shared>
+        <proposition predicate="additional_pain" value="burning_sensation" />
+      </assume_shared>
+      <findout type="wh_question" predicate="burn_reaction" />
+      <if>
+        <proposition predicate="burn_reaction" value="increase" />
+        <then>
+          <findout type="yn_question" >
+            <proposition predicate="is_belching" />
+          </findout>
+          <if>
+            <proposition predicate="is_belching" />
+            <then>
+              <assume_shared>
+                <proposition predicate="extra_symptoms" value="nausea_belching" />
+              </assume_shared>
+              <invoke_service_query predicate="diagnosis" type="wh_question"/>
+              <invoke_service_query predicate="inform" type="wh_question"/>
+              <get_done action="patient_inform" />
+              <invoke_service_query predicate="get_advice" type="wh_question"/>
+              <get_done action="advices" />
+              <inform>
+                <proposition predicate="diagnosed" value="diagnosis_done" />
+              </inform>
+            </then>
+          </if>
+
+        </then>
+      </if>
+
+      <jumpto type="perform" action="top"/>
       <signal_action_completion />
     </plan>
   </goal>
 
   <goal type="perform" action="gallstones_action">
     <plan>
+      <findout type="yn_question" >
+        <proposition predicate="is_belching" />
+      </findout>
+      <if>
+        <proposition predicate="is_belching" />
+        <then>
+          <assume_shared>
+            <proposition predicate="extra_symptoms" value="nausea_belching" />
+          </assume_shared>
+          <findout type="yn_question" >
+            <proposition predicate="has_probs" />
+          </findout>
+          <if>
+            <proposition predicate="has_probs" value="false"/>
+            <then>
+              <findout type="wh_question" predicate="urine_color" />
+              <invoke_service_query predicate="diagnosis" type="wh_question"/>
+              <invoke_service_query predicate="inform" type="wh_question"/>
+              <get_done action="patient_inform" />
+              <invoke_service_query predicate="get_advice" type="wh_question"/>
+              <get_done action="advices" />
+              <inform>
+                <proposition predicate="diagnosed" value="diagnosis_done" />
+              </inform>
+            </then>
+          </if>
 
-      <inform>
-        <proposition predicate="diagnosed" value="diagnosis_done" />
-      </inform>
+        </then>
+      </if>
+
+      <jumpto type="perform" action="top"/>
       <signal_action_completion />
     </plan>
   </goal>
