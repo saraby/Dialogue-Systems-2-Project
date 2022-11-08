@@ -331,7 +331,7 @@
         <proposition predicate="lately"/>
       </invoke_service_query>
       <if>
-        <proposition predicate="lately"/>
+        <proposition predicate="lately" value="false"/>
         <then>
           <findout type="yn_question" >
             <proposition predicate="has_burning_sensation" />

@@ -25,7 +25,7 @@
     },
     "Stomach Ulcer": {
         "symptoms":["stomachache","burning_sensation","nausea_belching"],
-        "inform":"",
+        "inform":"you suffer from a condition called Stomach Ulcer.",
         "advices": "limit or preferably avoid chocolate, spices and spicy food, alcohol, acidic foods; oranges lemons and tomatoes and also caffeine",
         "prescriptions": "take 40mg Omeprazole once a day and that would be half an hour before breakfast"
     },

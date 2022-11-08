@@ -115,9 +115,20 @@
       <item>there is pain that hits in <slot predicate="additional_pain"/></item>
 
       <item>it started <slot predicate="when_started"/></item>
+      <item>it started two <slot predicate="when_started"/> ago</item>
+      <item>it started three <slot predicate="when_started"/> ago</item>
+      <item>it started four <slot predicate="when_started"/> ago</item>
+      <item>it started a couple of <slot predicate="when_started"/> ago</item>
       <item>since <slot predicate="when_started"/></item>
-      <item>since <slot predicate="when_started"/> ago</item>
-      <item>I started to feel this way since <slot predicate="when_started"/> ago </item>
+      <item>since two <slot predicate="when_started"/> ago</item>
+      <item>since three <slot predicate="when_started"/> ago</item>
+      <item>since four <slot predicate="when_started"/> ago</item>
+      <item>since a couple of <slot predicate="when_started"/> ago</item>
+      <item>I started to feel this way since <slot predicate="when_started"/> </item>
+      <item>I started to feel this way since two <slot predicate="when_started"/> ago </item>
+      <item>I started to feel this way since three <slot predicate="when_started"/> ago </item>
+      <item>I started to feel this way since four <slot predicate="when_started"/> ago </item>
+      <item>I started to feel this way since a couple of <slot predicate="when_started"/> ago </item>
       <item>the last <slot predicate="when_started"/> it increased substantially </item>
 
       <item>my pressure is <slot predicate="high_pressure"/> over <slot predicate="low_pressure"/></item>
@@ -242,8 +253,8 @@
   <individual name="when">
     <one-of>
       <item>yesterday</item>
-      <item>two days ago</item>
-      <item>two weeks ago</item>
+      <item>days</item>
+      <item>weeks</item>
     </one-of>
   </individual>
   <individual name="a_med">Clarithromycin</individual>

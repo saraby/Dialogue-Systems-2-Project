@@ -199,7 +199,9 @@ def blood_pressure():
 @app.route("/lately", methods=['POST'])
 def lately():
     payload = request.get_json()
-    started = payload["context"]["facts"]["when_started"]["grammar_entry"]
+    print(3*"\n", payload, 3*"\n")
+    started = str(payload["context"]["facts"]["when_started"]["grammar_entry"])
+    print(3*"\n", started, 3*"\n",)
     if "week" in started:
       lately = False
     else:
