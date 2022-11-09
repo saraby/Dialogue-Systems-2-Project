@@ -250,11 +250,17 @@
       <item>Watery and normal light brown</item>
     </one-of>
   </individual>
-  <individual name="when">
+  <individual name="week">
+    <one-of>
+      <item>week</item>
+      <item>weeks</item>
+    </one-of>
+  </individual>
+  <individual name="day">
     <one-of>
       <item>yesterday</item>
+      <item>today</item>
       <item>days</item>
-      <item>weeks</item>
     </one-of>
   </individual>
   <individual name="a_med">Clarithromycin</individual>

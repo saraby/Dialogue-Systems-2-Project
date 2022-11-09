@@ -126,9 +126,11 @@ nlu:
     - [in a call center]{"entity": "sort.data", "value": "individual.call_center"}
     - [a journalist]{"entity": "sort.data", "value": "individual.journalist"}
     - [Clarithromycin]{"entity": "sort.meds", "value": "individual.a_med"}
-    - [yesterday]{"entity": "sort.time", "value": "individual.when"}
-    - [days]{"entity": "sort.time", "value": "individual.when"}
-    - [weeks]{"entity": "sort.time", "value": "individual.when"}
+    - [week]{"entity": "sort.time", "value": "individual.week"}
+    - [weeks]{"entity": "sort.time", "value": "individual.week"}
+    - [yesterday]{"entity": "sort.time", "value": "individual.day"}
+    - [today]{"entity": "sort.time", "value": "individual.day"}
+    - [days]{"entity": "sort.time", "value": "individual.day"}
     - I work as [a journalist]{"entity": "sort.data", "value": "individual.journalist"}
     - I work as [a programmer]{"entity": "sort.data", "value": "individual.it_related"}
     - I work as [a software developer]{"entity": "sort.data", "value": "individual.it_related"}
@@ -157,204 +159,236 @@ nlu:
     - I currently work as [an informatics engineer]{"entity": "sort.data", "value": "individual.it_related"}
     - I currently work as [an it support]{"entity": "sort.data", "value": "individual.it_related"}
     - I currently work as [in a call center]{"entity": "sort.data", "value": "individual.call_center"}
-    - [agitated]{"entity": "sort.symptom", "value": "individual.agitated"}
-    - [belching]{"entity": "sort.symptom", "value": "individual.nausea_belching"}
-    - [between yellow and orange]{"entity": "sort.symptom", "value": "individual.orange_urine"}
+    - [Watery and the color is normal light brown]{"entity": "sort.symptom", "value": "individual.watery_brown"}
     - [burns]{"entity": "sort.symptom", "value": "individual.burning_sensation"}
-    - [exhausted]{"entity": "sort.symptom", "value": "individual.fatigued"}
-    - [fatigued and exhausted]{"entity": "sort.symptom", "value": "individual.fatigued"}
-    - [fatigued]{"entity": "sort.symptom", "value": "individual.fatigued"}
-    - [headache]{"entity": "sort.symptom", "value": "individual.headache"}
-    - [orange]{"entity": "sort.symptom", "value": "individual.orange_urine"}
-    - [yellow to orange]{"entity": "sort.symptom", "value": "individual.orange_urine"}
-    - I have [agitated]{"entity": "sort.symptom", "value": "individual.agitated"}
+    - [have appetite]{"entity": "sort.symptom", "value": "individual.with_appetite"}
+    - [left side]{"entity": "sort.symptom", "value": "individual.one_sided"}
+    - [nausea and diarrhea]{"entity": "sort.symptom", "value": "individual.nausea_diarrhea"}
+    - [one side]{"entity": "sort.symptom", "value": "individual.one_sided"}
+    - [one sided]{"entity": "sort.symptom", "value": "individual.one_sided"}
+    - [right side]{"entity": "sort.symptom", "value": "individual.one_sided"}
+    - [stomach pain]{"entity": "sort.symptom", "value": "individual.stomachache"}
+    - [stomachache]{"entity": "sort.symptom", "value": "individual.stomachache"}
     - I have [belching]{"entity": "sort.symptom", "value": "individual.nausea_belching"}
+    - I have [between yellow and orange]{"entity": "sort.symptom", "value": "individual.orange_urine"}
     - I have [burns]{"entity": "sort.symptom", "value": "individual.burning_sensation"}
+    - I have [fatigued]{"entity": "sort.symptom", "value": "individual.fatigued"}
     - I have [headache]{"entity": "sort.symptom", "value": "individual.headache"}
-    - I have [left eye and left side of my face]{"entity": "sort.symptom", "value": "individual.eye_face_pain"}
     - I have [no appetite]{"entity": "sort.symptom", "value": "individual.no_appetite"}
-    - I have [one eye and one side of my face]{"entity": "sort.symptom", "value": "individual.eye_face_pain"}
-    - I have [right eye and right side of my face]{"entity": "sort.symptom", "value": "individual.eye_face_pain"}
+    - I have [orange]{"entity": "sort.symptom", "value": "individual.orange_urine"}
     - I have [short breaths like my chest is being closed]{"entity": "sort.symptom", "value": "individual.short_breaths"}
     - I have [short breaths]{"entity": "sort.symptom", "value": "individual.short_breaths"}
+    - I have [yellow to orange]{"entity": "sort.symptom", "value": "individual.orange_urine"}
     - I suffer from [Watery and brown]{"entity": "sort.symptom", "value": "individual.watery_brown"}
     - I suffer from [Watery and normal light brown]{"entity": "sort.symptom", "value": "individual.watery_brown"}
     - I suffer from [Watery and the color is brown]{"entity": "sort.symptom", "value": "individual.watery_brown"}
     - I suffer from [Watery and the color is normal light brown]{"entity": "sort.symptom", "value": "individual.watery_brown"}
-    - I suffer from [belching]{"entity": "sort.symptom", "value": "individual.nausea_belching"}
-    - I suffer from [exhausted]{"entity": "sort.symptom", "value": "individual.fatigued"}
-    - I suffer from [fatigued and exhausted]{"entity": "sort.symptom", "value": "individual.fatigued"}
-    - I suffer from [fatigued]{"entity": "sort.symptom", "value": "individual.fatigued"}
-    - I suffer from [have appetite]{"entity": "sort.symptom", "value": "individual.with_appetite"}
-    - I suffer from [right side]{"entity": "sort.symptom", "value": "individual.one_sided"}
+    - I suffer from [between yellow and orange]{"entity": "sort.symptom", "value": "individual.orange_urine"}
+    - I suffer from [headache]{"entity": "sort.symptom", "value": "individual.headache"}
+    - I suffer from [orange]{"entity": "sort.symptom", "value": "individual.orange_urine"}
+    - I suffer from [short breaths like my chest is being closed]{"entity": "sort.symptom", "value": "individual.short_breaths"}
+    - I suffer from [short breaths]{"entity": "sort.symptom", "value": "individual.short_breaths"}
+    - I suffer from [yellow to orange]{"entity": "sort.symptom", "value": "individual.orange_urine"}
+    - I feel [Watery and brown]{"entity": "sort.symptom", "value": "individual.watery_brown"}
+    - I feel [Watery and normal light brown]{"entity": "sort.symptom", "value": "individual.watery_brown"}
+    - I feel [Watery and the color is brown]{"entity": "sort.symptom", "value": "individual.watery_brown"}
+    - I feel [Watery and the color is normal light brown]{"entity": "sort.symptom", "value": "individual.watery_brown"}
     - I feel [belching]{"entity": "sort.symptom", "value": "individual.nausea_belching"}
-    - I feel [between yellow and orange]{"entity": "sort.symptom", "value": "individual.orange_urine"}
-    - I feel [burns]{"entity": "sort.symptom", "value": "individual.burning_sensation"}
+    - I feel [left eye and left side of my face]{"entity": "sort.symptom", "value": "individual.eye_face_pain"}
     - I feel [nausea and diarrhea]{"entity": "sort.symptom", "value": "individual.nausea_diarrhea"}
-    - I feel [orange]{"entity": "sort.symptom", "value": "individual.orange_urine"}
-    - I feel [short breaths like my chest is being closed]{"entity": "sort.symptom", "value": "individual.short_breaths"}
-    - I feel [short breaths]{"entity": "sort.symptom", "value": "individual.short_breaths"}
-    - I feel [stomach pain]{"entity": "sort.symptom", "value": "individual.stomachache"}
-    - I feel [stomachache]{"entity": "sort.symptom", "value": "individual.stomachache"}
+    - I feel [one eye and one side of my face]{"entity": "sort.symptom", "value": "individual.eye_face_pain"}
+    - I feel [right eye and right side of my face]{"entity": "sort.symptom", "value": "individual.eye_face_pain"}
     - I feel [yellow to orange]{"entity": "sort.symptom", "value": "individual.orange_urine"}
+    - I am [agitated]{"entity": "sort.symptom", "value": "individual.agitated"}
+    - I am [belching]{"entity": "sort.symptom", "value": "individual.nausea_belching"}
     - I am [exhausted]{"entity": "sort.symptom", "value": "individual.fatigued"}
     - I am [fatigued and exhausted]{"entity": "sort.symptom", "value": "individual.fatigued"}
     - I am [fatigued]{"entity": "sort.symptom", "value": "individual.fatigued"}
-    - I am [have appetite]{"entity": "sort.symptom", "value": "individual.with_appetite"}
     - I am [left eye and left side of my face]{"entity": "sort.symptom", "value": "individual.eye_face_pain"}
     - I am [nausea and diarrhea]{"entity": "sort.symptom", "value": "individual.nausea_diarrhea"}
     - I am [no appetite]{"entity": "sort.symptom", "value": "individual.no_appetite"}
     - I am [one eye and one side of my face]{"entity": "sort.symptom", "value": "individual.eye_face_pain"}
     - I am [right eye and right side of my face]{"entity": "sort.symptom", "value": "individual.eye_face_pain"}
-    - I am [short breaths]{"entity": "sort.symptom", "value": "individual.short_breaths"}
-    - it is [agitated]{"entity": "sort.symptom", "value": "individual.agitated"}
-    - it is [belching]{"entity": "sort.symptom", "value": "individual.nausea_belching"}
+    - it is [between yellow and orange]{"entity": "sort.symptom", "value": "individual.orange_urine"}
     - it is [burns]{"entity": "sort.symptom", "value": "individual.burning_sensation"}
-    - it is [have appetite]{"entity": "sort.symptom", "value": "individual.with_appetite"}
-    - it is [headache]{"entity": "sort.symptom", "value": "individual.headache"}
-    - it is [left eye and left side of my face]{"entity": "sort.symptom", "value": "individual.eye_face_pain"}
-    - it is [one eye and one side of my face]{"entity": "sort.symptom", "value": "individual.eye_face_pain"}
-    - it is [right eye and right side of my face]{"entity": "sort.symptom", "value": "individual.eye_face_pain"}
+    - it is [exhausted]{"entity": "sort.symptom", "value": "individual.fatigued"}
+    - it is [fatigued and exhausted]{"entity": "sort.symptom", "value": "individual.fatigued"}
+    - it is [fatigued]{"entity": "sort.symptom", "value": "individual.fatigued"}
+    - it is [nausea and diarrhea]{"entity": "sort.symptom", "value": "individual.nausea_diarrhea"}
+    - it is [orange]{"entity": "sort.symptom", "value": "individual.orange_urine"}
     - it is [short breaths like my chest is being closed]{"entity": "sort.symptom", "value": "individual.short_breaths"}
     - it is [short breaths]{"entity": "sort.symptom", "value": "individual.short_breaths"}
-    - I feel the pain on the [Watery and the color is brown]{"entity": "sort.symptom", "value": "individual.watery_brown"}
-    - I feel the pain on the [Watery and the color is normal light brown]{"entity": "sort.symptom", "value": "individual.watery_brown"}
+    - it is [yellow to orange]{"entity": "sort.symptom", "value": "individual.orange_urine"}
+    - I feel the pain on the [agitated]{"entity": "sort.symptom", "value": "individual.agitated"}
     - I feel the pain on the [belching]{"entity": "sort.symptom", "value": "individual.nausea_belching"}
     - I feel the pain on the [between yellow and orange]{"entity": "sort.symptom", "value": "individual.orange_urine"}
-    - I feel the pain on the [headache]{"entity": "sort.symptom", "value": "individual.headache"}
-    - I feel the pain on the [no appetite]{"entity": "sort.symptom", "value": "individual.no_appetite"}
+    - I feel the pain on the [left side]{"entity": "sort.symptom", "value": "individual.one_sided"}
+    - I feel the pain on the [one side]{"entity": "sort.symptom", "value": "individual.one_sided"}
     - I feel the pain on the [orange]{"entity": "sort.symptom", "value": "individual.orange_urine"}
-    - I feel the pain on the [stomach pain]{"entity": "sort.symptom", "value": "individual.stomachache"}
-    - I feel the pain on the [stomachache]{"entity": "sort.symptom", "value": "individual.stomachache"}
+    - I feel the pain on the [right side]{"entity": "sort.symptom", "value": "individual.one_sided"}
+    - I feel the pain on the [short breaths like my chest is being closed]{"entity": "sort.symptom", "value": "individual.short_breaths"}
+    - I feel the pain on the [short breaths]{"entity": "sort.symptom", "value": "individual.short_breaths"}
     - I feel the pain on the [yellow to orange]{"entity": "sort.symptom", "value": "individual.orange_urine"}
-    - it hits on the [agitated]{"entity": "sort.symptom", "value": "individual.agitated"}
-    - it hits on the [exhausted]{"entity": "sort.symptom", "value": "individual.fatigued"}
-    - it hits on the [fatigued and exhausted]{"entity": "sort.symptom", "value": "individual.fatigued"}
-    - it hits on the [fatigued]{"entity": "sort.symptom", "value": "individual.fatigued"}
+    - it hits on the [belching]{"entity": "sort.symptom", "value": "individual.nausea_belching"}
+    - it hits on the [between yellow and orange]{"entity": "sort.symptom", "value": "individual.orange_urine"}
+    - it hits on the [burns]{"entity": "sort.symptom", "value": "individual.burning_sensation"}
     - it hits on the [have appetite]{"entity": "sort.symptom", "value": "individual.with_appetite"}
-    - it hits on the [left eye and left side of my face]{"entity": "sort.symptom", "value": "individual.eye_face_pain"}
-    - it hits on the [one eye and one side of my face]{"entity": "sort.symptom", "value": "individual.eye_face_pain"}
-    - it hits on the [right eye and right side of my face]{"entity": "sort.symptom", "value": "individual.eye_face_pain"}
-    - it hits on the [stomach pain]{"entity": "sort.symptom", "value": "individual.stomachache"}
-    - it hits on the [stomachache]{"entity": "sort.symptom", "value": "individual.stomachache"}
+    - it hits on the [headache]{"entity": "sort.symptom", "value": "individual.headache"}
+    - it hits on the [left side]{"entity": "sort.symptom", "value": "individual.one_sided"}
+    - it hits on the [no appetite]{"entity": "sort.symptom", "value": "individual.no_appetite"}
+    - it hits on the [orange]{"entity": "sort.symptom", "value": "individual.orange_urine"}
+    - it hits on the [right side]{"entity": "sort.symptom", "value": "individual.one_sided"}
+    - it hits on the [yellow to orange]{"entity": "sort.symptom", "value": "individual.orange_urine"}
+    - I feel on the [agitated]{"entity": "sort.symptom", "value": "individual.agitated"}
+    - I feel on the [belching]{"entity": "sort.symptom", "value": "individual.nausea_belching"}
     - I feel on the [between yellow and orange]{"entity": "sort.symptom", "value": "individual.orange_urine"}
-    - I feel on the [burns]{"entity": "sort.symptom", "value": "individual.burning_sensation"}
+    - I feel on the [fatigued and exhausted]{"entity": "sort.symptom", "value": "individual.fatigued"}
     - I feel on the [fatigued]{"entity": "sort.symptom", "value": "individual.fatigued"}
-    - I feel on the [left side]{"entity": "sort.symptom", "value": "individual.one_sided"}
-    - I feel on the [nausea and diarrhea]{"entity": "sort.symptom", "value": "individual.nausea_diarrhea"}
-    - I feel on the [one side]{"entity": "sort.symptom", "value": "individual.one_sided"}
-    - I feel on the [one sided]{"entity": "sort.symptom", "value": "individual.one_sided"}
+    - I feel on the [headache]{"entity": "sort.symptom", "value": "individual.headache"}
     - I feel on the [orange]{"entity": "sort.symptom", "value": "individual.orange_urine"}
-    - I feel on the [right side]{"entity": "sort.symptom", "value": "individual.one_sided"}
+    - I feel on the [short breaths like my chest is being closed]{"entity": "sort.symptom", "value": "individual.short_breaths"}
+    - I feel on the [short breaths]{"entity": "sort.symptom", "value": "individual.short_breaths"}
     - I feel on the [yellow to orange]{"entity": "sort.symptom", "value": "individual.orange_urine"}
-    - usually I can feel it [belching]{"entity": "sort.symptom", "value": "individual.nausea_belching"}
-    - usually I can feel it [exhausted]{"entity": "sort.symptom", "value": "individual.fatigued"}
-    - usually I can feel it [fatigued and exhausted]{"entity": "sort.symptom", "value": "individual.fatigued"}
-    - usually I can feel it [fatigued]{"entity": "sort.symptom", "value": "individual.fatigued"}
+    - usually I can feel it [Watery and brown]{"entity": "sort.symptom", "value": "individual.watery_brown"}
+    - usually I can feel it [Watery and normal light brown]{"entity": "sort.symptom", "value": "individual.watery_brown"}
+    - usually I can feel it [Watery and the color is brown]{"entity": "sort.symptom", "value": "individual.watery_brown"}
+    - usually I can feel it [Watery and the color is normal light brown]{"entity": "sort.symptom", "value": "individual.watery_brown"}
+    - usually I can feel it [agitated]{"entity": "sort.symptom", "value": "individual.agitated"}
     - usually I can feel it [have appetite]{"entity": "sort.symptom", "value": "individual.with_appetite"}
-    - usually I can feel it [headache]{"entity": "sort.symptom", "value": "individual.headache"}
     - usually I can feel it [nausea and diarrhea]{"entity": "sort.symptom", "value": "individual.nausea_diarrhea"}
-    - usually I can feel it [no appetite]{"entity": "sort.symptom", "value": "individual.no_appetite"}
-    - usually I can feel it [stomach pain]{"entity": "sort.symptom", "value": "individual.stomachache"}
-    - usually I can feel it [stomachache]{"entity": "sort.symptom", "value": "individual.stomachache"}
-    - I feel pain in my [agitated]{"entity": "sort.symptom", "value": "individual.agitated"}
-    - I feel pain in my [belching]{"entity": "sort.symptom", "value": "individual.nausea_belching"}
-    - I feel pain in my [between yellow and orange]{"entity": "sort.symptom", "value": "individual.orange_urine"}
-    - I feel pain in my [burns]{"entity": "sort.symptom", "value": "individual.burning_sensation"}
-    - I feel pain in my [left side]{"entity": "sort.symptom", "value": "individual.one_sided"}
-    - I feel pain in my [orange]{"entity": "sort.symptom", "value": "individual.orange_urine"}
-    - I feel pain in my [right side]{"entity": "sort.symptom", "value": "individual.one_sided"}
+    - usually I can feel it [one eye and one side of my face]{"entity": "sort.symptom", "value": "individual.eye_face_pain"}
+    - usually I can feel it [short breaths like my chest is being closed]{"entity": "sort.symptom", "value": "individual.short_breaths"}
+    - usually I can feel it [short breaths]{"entity": "sort.symptom", "value": "individual.short_breaths"}
+    - I feel pain in my [Watery and brown]{"entity": "sort.symptom", "value": "individual.watery_brown"}
+    - I feel pain in my [Watery and normal light brown]{"entity": "sort.symptom", "value": "individual.watery_brown"}
+    - I feel pain in my [Watery and the color is brown]{"entity": "sort.symptom", "value": "individual.watery_brown"}
+    - I feel pain in my [Watery and the color is normal light brown]{"entity": "sort.symptom", "value": "individual.watery_brown"}
+    - I feel pain in my [exhausted]{"entity": "sort.symptom", "value": "individual.fatigued"}
+    - I feel pain in my [fatigued and exhausted]{"entity": "sort.symptom", "value": "individual.fatigued"}
+    - I feel pain in my [fatigued]{"entity": "sort.symptom", "value": "individual.fatigued"}
+    - I feel pain in my [headache]{"entity": "sort.symptom", "value": "individual.headache"}
     - I feel pain in my [stomach pain]{"entity": "sort.symptom", "value": "individual.stomachache"}
     - I feel pain in my [stomachache]{"entity": "sort.symptom", "value": "individual.stomachache"}
-    - I feel pain in my [yellow to orange]{"entity": "sort.symptom", "value": "individual.orange_urine"}
-    - there is a clear pain in the [Watery and the color is normal light brown]{"entity": "sort.symptom", "value": "individual.watery_brown"}
-    - there is a clear pain in the [belching]{"entity": "sort.symptom", "value": "individual.nausea_belching"}
-    - there is a clear pain in the [burns]{"entity": "sort.symptom", "value": "individual.burning_sensation"}
+    - there is a clear pain in the [agitated]{"entity": "sort.symptom", "value": "individual.agitated"}
+    - there is a clear pain in the [between yellow and orange]{"entity": "sort.symptom", "value": "individual.orange_urine"}
     - there is a clear pain in the [have appetite]{"entity": "sort.symptom", "value": "individual.with_appetite"}
     - there is a clear pain in the [nausea and diarrhea]{"entity": "sort.symptom", "value": "individual.nausea_diarrhea"}
     - there is a clear pain in the [no appetite]{"entity": "sort.symptom", "value": "individual.no_appetite"}
+    - there is a clear pain in the [orange]{"entity": "sort.symptom", "value": "individual.orange_urine"}
     - there is a clear pain in the [short breaths like my chest is being closed]{"entity": "sort.symptom", "value": "individual.short_breaths"}
     - there is a clear pain in the [short breaths]{"entity": "sort.symptom", "value": "individual.short_breaths"}
     - there is a clear pain in the [stomach pain]{"entity": "sort.symptom", "value": "individual.stomachache"}
-    - there is a clear pain in the [stomachache]{"entity": "sort.symptom", "value": "individual.stomachache"}
+    - there is a clear pain in the [yellow to orange]{"entity": "sort.symptom", "value": "individual.orange_urine"}
     - there is pain that hits in [Watery and brown]{"entity": "sort.symptom", "value": "individual.watery_brown"}
     - there is pain that hits in [Watery and normal light brown]{"entity": "sort.symptom", "value": "individual.watery_brown"}
     - there is pain that hits in [Watery and the color is brown]{"entity": "sort.symptom", "value": "individual.watery_brown"}
     - there is pain that hits in [Watery and the color is normal light brown]{"entity": "sort.symptom", "value": "individual.watery_brown"}
+    - there is pain that hits in [burns]{"entity": "sort.symptom", "value": "individual.burning_sensation"}
+    - there is pain that hits in [exhausted]{"entity": "sort.symptom", "value": "individual.fatigued"}
     - there is pain that hits in [fatigued and exhausted]{"entity": "sort.symptom", "value": "individual.fatigued"}
     - there is pain that hits in [fatigued]{"entity": "sort.symptom", "value": "individual.fatigued"}
-    - there is pain that hits in [headache]{"entity": "sort.symptom", "value": "individual.headache"}
-    - there is pain that hits in [left eye and left side of my face]{"entity": "sort.symptom", "value": "individual.eye_face_pain"}
-    - there is pain that hits in [one eye and one side of my face]{"entity": "sort.symptom", "value": "individual.eye_face_pain"}
-    - there is pain that hits in [right eye and right side of my face]{"entity": "sort.symptom", "value": "individual.eye_face_pain"}
-    - it started [days]{"entity": "sort.time", "value": "individual.when"}
-    - it started [weeks]{"entity": "sort.time", "value": "individual.when"}
-    - it started [yesterday]{"entity": "sort.time", "value": "individual.when"}
-    - it started two [days]{"entity": "sort.time", "value": "individual.when"} ago
-    - it started two [weeks]{"entity": "sort.time", "value": "individual.when"} ago
-    - it started two [yesterday]{"entity": "sort.time", "value": "individual.when"} ago
-    - it started three [days]{"entity": "sort.time", "value": "individual.when"} ago
-    - it started three [weeks]{"entity": "sort.time", "value": "individual.when"} ago
-    - it started three [yesterday]{"entity": "sort.time", "value": "individual.when"} ago
-    - it started four [days]{"entity": "sort.time", "value": "individual.when"} ago
-    - it started four [weeks]{"entity": "sort.time", "value": "individual.when"} ago
-    - it started four [yesterday]{"entity": "sort.time", "value": "individual.when"} ago
-    - it started a couple of [days]{"entity": "sort.time", "value": "individual.when"} ago
-    - it started a couple of [weeks]{"entity": "sort.time", "value": "individual.when"} ago
-    - it started a couple of [yesterday]{"entity": "sort.time", "value": "individual.when"} ago
-    - since [days]{"entity": "sort.time", "value": "individual.when"}
-    - since [weeks]{"entity": "sort.time", "value": "individual.when"}
-    - since [yesterday]{"entity": "sort.time", "value": "individual.when"}
-    - since two [days]{"entity": "sort.time", "value": "individual.when"} ago
-    - since two [weeks]{"entity": "sort.time", "value": "individual.when"} ago
-    - since two [yesterday]{"entity": "sort.time", "value": "individual.when"} ago
-    - since three [days]{"entity": "sort.time", "value": "individual.when"} ago
-    - since three [weeks]{"entity": "sort.time", "value": "individual.when"} ago
-    - since three [yesterday]{"entity": "sort.time", "value": "individual.when"} ago
-    - since four [days]{"entity": "sort.time", "value": "individual.when"} ago
-    - since four [weeks]{"entity": "sort.time", "value": "individual.when"} ago
-    - since four [yesterday]{"entity": "sort.time", "value": "individual.when"} ago
-    - since a couple of [days]{"entity": "sort.time", "value": "individual.when"} ago
-    - since a couple of [weeks]{"entity": "sort.time", "value": "individual.when"} ago
-    - since a couple of [yesterday]{"entity": "sort.time", "value": "individual.when"} ago
-    - I started to feel this way since [days]{"entity": "sort.time", "value": "individual.when"}
-    - I started to feel this way since [weeks]{"entity": "sort.time", "value": "individual.when"}
-    - I started to feel this way since [yesterday]{"entity": "sort.time", "value": "individual.when"}
-    - I started to feel this way since two [days]{"entity": "sort.time", "value": "individual.when"} ago
-    - I started to feel this way since two [weeks]{"entity": "sort.time", "value": "individual.when"} ago
-    - I started to feel this way since two [yesterday]{"entity": "sort.time", "value": "individual.when"} ago
-    - I started to feel this way since three [days]{"entity": "sort.time", "value": "individual.when"} ago
-    - I started to feel this way since three [weeks]{"entity": "sort.time", "value": "individual.when"} ago
-    - I started to feel this way since three [yesterday]{"entity": "sort.time", "value": "individual.when"} ago
-    - I started to feel this way since four [days]{"entity": "sort.time", "value": "individual.when"} ago
-    - I started to feel this way since four [weeks]{"entity": "sort.time", "value": "individual.when"} ago
-    - I started to feel this way since four [yesterday]{"entity": "sort.time", "value": "individual.when"} ago
-    - I started to feel this way since a couple of [days]{"entity": "sort.time", "value": "individual.when"} ago
-    - I started to feel this way since a couple of [weeks]{"entity": "sort.time", "value": "individual.when"} ago
-    - I started to feel this way since a couple of [yesterday]{"entity": "sort.time", "value": "individual.when"} ago
-    - the last [days]{"entity": "sort.time", "value": "individual.when"} it increased substantially
-    - the last [weeks]{"entity": "sort.time", "value": "individual.when"} it increased substantially
-    - the last [yesterday]{"entity": "sort.time", "value": "individual.when"} it increased substantially
-    - it is [Watery and brown]{"entity": "sort.symptom", "value": "individual.watery_brown"}
-    - it is [Watery and normal light brown]{"entity": "sort.symptom", "value": "individual.watery_brown"}
-    - it is [Watery and the color is brown]{"entity": "sort.symptom", "value": "individual.watery_brown"}
-    - it is [Watery and the color is normal light brown]{"entity": "sort.symptom", "value": "individual.watery_brown"}
+    - there is pain that hits in [nausea and diarrhea]{"entity": "sort.symptom", "value": "individual.nausea_diarrhea"}
+    - there is pain that hits in [no appetite]{"entity": "sort.symptom", "value": "individual.no_appetite"}
+    - it started [days]{"entity": "sort.time", "value": "individual.day"}
+    - it started [today]{"entity": "sort.time", "value": "individual.day"}
+    - it started [week]{"entity": "sort.time", "value": "individual.week"}
+    - it started [weeks]{"entity": "sort.time", "value": "individual.week"}
+    - it started [yesterday]{"entity": "sort.time", "value": "individual.day"}
+    - it started two [days]{"entity": "sort.time", "value": "individual.day"} ago
+    - it started two [today]{"entity": "sort.time", "value": "individual.day"} ago
+    - it started two [week]{"entity": "sort.time", "value": "individual.week"} ago
+    - it started two [weeks]{"entity": "sort.time", "value": "individual.week"} ago
+    - it started two [yesterday]{"entity": "sort.time", "value": "individual.day"} ago
+    - it started three [days]{"entity": "sort.time", "value": "individual.day"} ago
+    - it started three [today]{"entity": "sort.time", "value": "individual.day"} ago
+    - it started three [week]{"entity": "sort.time", "value": "individual.week"} ago
+    - it started three [weeks]{"entity": "sort.time", "value": "individual.week"} ago
+    - it started three [yesterday]{"entity": "sort.time", "value": "individual.day"} ago
+    - it started four [days]{"entity": "sort.time", "value": "individual.day"} ago
+    - it started four [today]{"entity": "sort.time", "value": "individual.day"} ago
+    - it started four [week]{"entity": "sort.time", "value": "individual.week"} ago
+    - it started four [weeks]{"entity": "sort.time", "value": "individual.week"} ago
+    - it started four [yesterday]{"entity": "sort.time", "value": "individual.day"} ago
+    - it started a couple of [days]{"entity": "sort.time", "value": "individual.day"} ago
+    - it started a couple of [today]{"entity": "sort.time", "value": "individual.day"} ago
+    - it started a couple of [week]{"entity": "sort.time", "value": "individual.week"} ago
+    - it started a couple of [weeks]{"entity": "sort.time", "value": "individual.week"} ago
+    - it started a couple of [yesterday]{"entity": "sort.time", "value": "individual.day"} ago
+    - since [days]{"entity": "sort.time", "value": "individual.day"}
+    - since [today]{"entity": "sort.time", "value": "individual.day"}
+    - since [week]{"entity": "sort.time", "value": "individual.week"}
+    - since [weeks]{"entity": "sort.time", "value": "individual.week"}
+    - since [yesterday]{"entity": "sort.time", "value": "individual.day"}
+    - since two [days]{"entity": "sort.time", "value": "individual.day"} ago
+    - since two [today]{"entity": "sort.time", "value": "individual.day"} ago
+    - since two [week]{"entity": "sort.time", "value": "individual.week"} ago
+    - since two [weeks]{"entity": "sort.time", "value": "individual.week"} ago
+    - since two [yesterday]{"entity": "sort.time", "value": "individual.day"} ago
+    - since three [days]{"entity": "sort.time", "value": "individual.day"} ago
+    - since three [today]{"entity": "sort.time", "value": "individual.day"} ago
+    - since three [week]{"entity": "sort.time", "value": "individual.week"} ago
+    - since three [weeks]{"entity": "sort.time", "value": "individual.week"} ago
+    - since three [yesterday]{"entity": "sort.time", "value": "individual.day"} ago
+    - since four [days]{"entity": "sort.time", "value": "individual.day"} ago
+    - since four [today]{"entity": "sort.time", "value": "individual.day"} ago
+    - since four [week]{"entity": "sort.time", "value": "individual.week"} ago
+    - since four [weeks]{"entity": "sort.time", "value": "individual.week"} ago
+    - since four [yesterday]{"entity": "sort.time", "value": "individual.day"} ago
+    - since a couple of [days]{"entity": "sort.time", "value": "individual.day"} ago
+    - since a couple of [today]{"entity": "sort.time", "value": "individual.day"} ago
+    - since a couple of [week]{"entity": "sort.time", "value": "individual.week"} ago
+    - since a couple of [weeks]{"entity": "sort.time", "value": "individual.week"} ago
+    - since a couple of [yesterday]{"entity": "sort.time", "value": "individual.day"} ago
+    - I started to feel this way since [days]{"entity": "sort.time", "value": "individual.day"}
+    - I started to feel this way since [today]{"entity": "sort.time", "value": "individual.day"}
+    - I started to feel this way since [week]{"entity": "sort.time", "value": "individual.week"}
+    - I started to feel this way since [weeks]{"entity": "sort.time", "value": "individual.week"}
+    - I started to feel this way since [yesterday]{"entity": "sort.time", "value": "individual.day"}
+    - I started to feel this way since two [days]{"entity": "sort.time", "value": "individual.day"} ago
+    - I started to feel this way since two [today]{"entity": "sort.time", "value": "individual.day"} ago
+    - I started to feel this way since two [week]{"entity": "sort.time", "value": "individual.week"} ago
+    - I started to feel this way since two [weeks]{"entity": "sort.time", "value": "individual.week"} ago
+    - I started to feel this way since two [yesterday]{"entity": "sort.time", "value": "individual.day"} ago
+    - I started to feel this way since three [days]{"entity": "sort.time", "value": "individual.day"} ago
+    - I started to feel this way since three [today]{"entity": "sort.time", "value": "individual.day"} ago
+    - I started to feel this way since three [week]{"entity": "sort.time", "value": "individual.week"} ago
+    - I started to feel this way since three [weeks]{"entity": "sort.time", "value": "individual.week"} ago
+    - I started to feel this way since three [yesterday]{"entity": "sort.time", "value": "individual.day"} ago
+    - I started to feel this way since four [days]{"entity": "sort.time", "value": "individual.day"} ago
+    - I started to feel this way since four [today]{"entity": "sort.time", "value": "individual.day"} ago
+    - I started to feel this way since four [week]{"entity": "sort.time", "value": "individual.week"} ago
+    - I started to feel this way since four [weeks]{"entity": "sort.time", "value": "individual.week"} ago
+    - I started to feel this way since four [yesterday]{"entity": "sort.time", "value": "individual.day"} ago
+    - I started to feel this way since a couple of [days]{"entity": "sort.time", "value": "individual.day"} ago
+    - I started to feel this way since a couple of [today]{"entity": "sort.time", "value": "individual.day"} ago
+    - I started to feel this way since a couple of [week]{"entity": "sort.time", "value": "individual.week"} ago
+    - I started to feel this way since a couple of [weeks]{"entity": "sort.time", "value": "individual.week"} ago
+    - I started to feel this way since a couple of [yesterday]{"entity": "sort.time", "value": "individual.day"} ago
+    - the last [days]{"entity": "sort.time", "value": "individual.day"} it increased substantially
+    - the last [today]{"entity": "sort.time", "value": "individual.day"} it increased substantially
+    - the last [week]{"entity": "sort.time", "value": "individual.week"} it increased substantially
+    - the last [weeks]{"entity": "sort.time", "value": "individual.week"} it increased substantially
+    - the last [yesterday]{"entity": "sort.time", "value": "individual.day"} it increased substantially
+    - it is [agitated]{"entity": "sort.symptom", "value": "individual.agitated"}
+    - it is [belching]{"entity": "sort.symptom", "value": "individual.nausea_belching"}
     - it is [burns]{"entity": "sort.symptom", "value": "individual.burning_sensation"}
-    - it is [left side]{"entity": "sort.symptom", "value": "individual.one_sided"}
+    - it is [headache]{"entity": "sort.symptom", "value": "individual.headache"}
+    - it is [left eye and left side of my face]{"entity": "sort.symptom", "value": "individual.eye_face_pain"}
     - it is [nausea and diarrhea]{"entity": "sort.symptom", "value": "individual.nausea_diarrhea"}
-    - it is [one side]{"entity": "sort.symptom", "value": "individual.one_sided"}
-    - it is [one sided]{"entity": "sort.symptom", "value": "individual.one_sided"}
-    - it is [right side]{"entity": "sort.symptom", "value": "individual.one_sided"}
-    - I noticed that it was [Watery and brown]{"entity": "sort.symptom", "value": "individual.watery_brown"} times
-    - I noticed that it was [Watery and normal light brown]{"entity": "sort.symptom", "value": "individual.watery_brown"} times
-    - I noticed that it was [Watery and the color is brown]{"entity": "sort.symptom", "value": "individual.watery_brown"} times
-    - I noticed that it was [Watery and the color is normal light brown]{"entity": "sort.symptom", "value": "individual.watery_brown"} times
+    - it is [one eye and one side of my face]{"entity": "sort.symptom", "value": "individual.eye_face_pain"}
+    - it is [right eye and right side of my face]{"entity": "sort.symptom", "value": "individual.eye_face_pain"}
+    - it is [short breaths like my chest is being closed]{"entity": "sort.symptom", "value": "individual.short_breaths"}
+    - it is [short breaths]{"entity": "sort.symptom", "value": "individual.short_breaths"}
+    - I noticed that it was [burns]{"entity": "sort.symptom", "value": "individual.burning_sensation"} times
     - I noticed that it was [exhausted]{"entity": "sort.symptom", "value": "individual.fatigued"} times
     - I noticed that it was [fatigued and exhausted]{"entity": "sort.symptom", "value": "individual.fatigued"} times
     - I noticed that it was [fatigued]{"entity": "sort.symptom", "value": "individual.fatigued"} times
-    - I noticed that it was [no appetite]{"entity": "sort.symptom", "value": "individual.no_appetite"} times
-    - I noticed that it was [stomach pain]{"entity": "sort.symptom", "value": "individual.stomachache"} times
-    - I noticed that it was [stomachache]{"entity": "sort.symptom", "value": "individual.stomachache"} times
+    - I noticed that it was [headache]{"entity": "sort.symptom", "value": "individual.headache"} times
+    - I noticed that it was [left side]{"entity": "sort.symptom", "value": "individual.one_sided"} times
+    - I noticed that it was [nausea and diarrhea]{"entity": "sort.symptom", "value": "individual.nausea_diarrhea"} times
+    - I noticed that it was [one side]{"entity": "sort.symptom", "value": "individual.one_sided"} times
+    - I noticed that it was [one sided]{"entity": "sort.symptom", "value": "individual.one_sided"} times
+    - I noticed that it was [right side]{"entity": "sort.symptom", "value": "individual.one_sided"} times
     - my Otolaryngologist prescribed [Clarithromycin]{"entity": "sort.meds", "value": "individual.a_med"} for my year infection
     - its name is[Clarithromycin]{"entity": "sort.meds", "value": "individual.a_med"}
     - it is [Clarithromycin]{"entity": "sort.meds", "value": "individual.a_med"}
@@ -403,22 +437,22 @@ nlu:
     - it is [Watery and normal light brown]{"entity": "sort.symptom", "value": "individual.watery_brown"}
     - it is [Watery and the color is brown]{"entity": "sort.symptom", "value": "individual.watery_brown"}
     - it is [Watery and the color is normal light brown]{"entity": "sort.symptom", "value": "individual.watery_brown"}
-    - it is [headache]{"entity": "sort.symptom", "value": "individual.headache"}
+    - it is [have appetite]{"entity": "sort.symptom", "value": "individual.with_appetite"}
     - it is [left side]{"entity": "sort.symptom", "value": "individual.one_sided"}
-    - it is [one side]{"entity": "sort.symptom", "value": "individual.one_sided"}
-    - it is [one sided]{"entity": "sort.symptom", "value": "individual.one_sided"}
+    - it is [no appetite]{"entity": "sort.symptom", "value": "individual.no_appetite"}
     - it is [right side]{"entity": "sort.symptom", "value": "individual.one_sided"}
-    - it is [short breaths]{"entity": "sort.symptom", "value": "individual.short_breaths"}
-    - a little [Watery and brown]{"entity": "sort.symptom", "value": "individual.watery_brown"}
-    - a little [Watery and normal light brown]{"entity": "sort.symptom", "value": "individual.watery_brown"}
-    - a little [Watery and the color is brown]{"entity": "sort.symptom", "value": "individual.watery_brown"}
-    - a little [Watery and the color is normal light brown]{"entity": "sort.symptom", "value": "individual.watery_brown"}
-    - a little [burns]{"entity": "sort.symptom", "value": "individual.burning_sensation"}
+    - it is [stomach pain]{"entity": "sort.symptom", "value": "individual.stomachache"}
+    - it is [stomachache]{"entity": "sort.symptom", "value": "individual.stomachache"}
+    - a little [between yellow and orange]{"entity": "sort.symptom", "value": "individual.orange_urine"}
+    - a little [exhausted]{"entity": "sort.symptom", "value": "individual.fatigued"}
+    - a little [fatigued and exhausted]{"entity": "sort.symptom", "value": "individual.fatigued"}
+    - a little [fatigued]{"entity": "sort.symptom", "value": "individual.fatigued"}
+    - a little [have appetite]{"entity": "sort.symptom", "value": "individual.with_appetite"}
     - a little [left eye and left side of my face]{"entity": "sort.symptom", "value": "individual.eye_face_pain"}
-    - a little [no appetite]{"entity": "sort.symptom", "value": "individual.no_appetite"}
     - a little [one eye and one side of my face]{"entity": "sort.symptom", "value": "individual.eye_face_pain"}
-    - a little [short breaths like my chest is being closed]{"entity": "sort.symptom", "value": "individual.short_breaths"}
-    - a little [short breaths]{"entity": "sort.symptom", "value": "individual.short_breaths"}
+    - a little [orange]{"entity": "sort.symptom", "value": "individual.orange_urine"}
+    - a little [right eye and right side of my face]{"entity": "sort.symptom", "value": "individual.eye_face_pain"}
+    - a little [yellow to orange]{"entity": "sort.symptom", "value": "individual.orange_urine"}
     - yes [headache]{"entity": "sort.symptom", "value": "individual.headache"}
     - yes [one side]{"entity": "sort.symptom", "value": "individual.one_sided"}
     - yes [Watery and the color is brown]{"entity": "sort.symptom", "value": "individual.watery_brown"}
@@ -426,35 +460,39 @@ nlu:
     - yes [increased]{"entity": "sort.level", "value": "individual.increase"}
     - yes [hey make it four](sort.string)
     - yes [a programmer]{"entity": "sort.data", "value": "individual.it_related"}
-    - yes I work as [a software developer]{"entity": "sort.data", "value": "individual.it_related"}
-    - yes I work [an it support]{"entity": "sort.data", "value": "individual.it_related"}
-    - yes I currently work as [a programmer]{"entity": "sort.data", "value": "individual.it_related"}
-    - yes [exhausted]{"entity": "sort.symptom", "value": "individual.fatigued"}
-    - yes I have [left eye and left side of my face]{"entity": "sort.symptom", "value": "individual.eye_face_pain"}
-    - yes I suffer from [belching]{"entity": "sort.symptom", "value": "individual.nausea_belching"}
-    - yes I feel [orange]{"entity": "sort.symptom", "value": "individual.orange_urine"}
-    - yes I am [left eye and left side of my face]{"entity": "sort.symptom", "value": "individual.eye_face_pain"}
-    - yes it is [headache]{"entity": "sort.symptom", "value": "individual.headache"}
-    - yes I feel the pain on the [headache]{"entity": "sort.symptom", "value": "individual.headache"}
-    - yes it hits on the [have appetite]{"entity": "sort.symptom", "value": "individual.with_appetite"}
-    - yes I feel on the [nausea and diarrhea]{"entity": "sort.symptom", "value": "individual.nausea_diarrhea"}
-    - yes usually I can feel it [have appetite]{"entity": "sort.symptom", "value": "individual.with_appetite"}
-    - yes I feel pain in my [left side]{"entity": "sort.symptom", "value": "individual.one_sided"}
-    - yes there is a clear pain in the [nausea and diarrhea]{"entity": "sort.symptom", "value": "individual.nausea_diarrhea"}
-    - yes there is pain that hits in [fatigued and exhausted]{"entity": "sort.symptom", "value": "individual.fatigued"}
-    - yes it started two [weeks]{"entity": "sort.time", "value": "individual.when"} ago
-    - yes it started a couple of [yesterday]{"entity": "sort.time", "value": "individual.when"} ago
-    - yes since four [days]{"entity": "sort.time", "value": "individual.when"} ago
-    - yes I started to feel this way since two [weeks]{"entity": "sort.time", "value": "individual.when"} ago
-    - yes I started to feel this way since a couple of [yesterday]{"entity": "sort.time", "value": "individual.when"} ago
-    - yes it is [nausea and diarrhea]{"entity": "sort.symptom", "value": "individual.nausea_diarrhea"}
-    - yes I noticed that it was [fatigued]{"entity": "sort.symptom", "value": "individual.fatigued"} times
-    - yes it is [decreases]{"entity": "sort.level", "value": "individual.decrease"}
-    - yes it [decreases]{"entity": "sort.level", "value": "individual.decrease"}
-    - yes it actually [decreases]{"entity": "sort.level", "value": "individual.decrease"}
-    - yes it would [decreases]{"entity": "sort.level", "value": "individual.decrease"}
-    - yes it is [Watery and the color is brown]{"entity": "sort.symptom", "value": "individual.watery_brown"}
-    - yes a little [Watery and the color is brown]{"entity": "sort.symptom", "value": "individual.watery_brown"}
+    - yes I work as [a journalist]{"entity": "sort.data", "value": "individual.journalist"}
+    - yes I work [an accountant]{"entity": "sort.data", "value": "individual.accountant"}
+    - yes I am [in a call center]{"entity": "sort.data", "value": "individual.call_center"}
+    - yes [have appetite]{"entity": "sort.symptom", "value": "individual.with_appetite"}
+    - yes I have [burns]{"entity": "sort.symptom", "value": "individual.burning_sensation"}
+    - yes I suffer from [Watery and the color is brown]{"entity": "sort.symptom", "value": "individual.watery_brown"}
+    - yes I feel [Watery and the color is brown]{"entity": "sort.symptom", "value": "individual.watery_brown"}
+    - yes I am [exhausted]{"entity": "sort.symptom", "value": "individual.fatigued"}
+    - yes it is [exhausted]{"entity": "sort.symptom", "value": "individual.fatigued"}
+    - yes I feel the pain on the [between yellow and orange]{"entity": "sort.symptom", "value": "individual.orange_urine"}
+    - yes it hits on the [burns]{"entity": "sort.symptom", "value": "individual.burning_sensation"}
+    - yes I feel on the [between yellow and orange]{"entity": "sort.symptom", "value": "individual.orange_urine"}
+    - yes usually I can feel it [Watery and the color is brown]{"entity": "sort.symptom", "value": "individual.watery_brown"}
+    - yes I feel pain in my [Watery and the color is brown]{"entity": "sort.symptom", "value": "individual.watery_brown"}
+    - yes there is a clear pain in the [have appetite]{"entity": "sort.symptom", "value": "individual.with_appetite"}
+    - yes there is pain that hits in [Watery and the color is brown]{"entity": "sort.symptom", "value": "individual.watery_brown"}
+    - yes it started [week]{"entity": "sort.time", "value": "individual.week"}
+    - yes it started three [week]{"entity": "sort.time", "value": "individual.week"} ago
+    - yes it started a couple of [week]{"entity": "sort.time", "value": "individual.week"} ago
+    - yes since two [week]{"entity": "sort.time", "value": "individual.week"} ago
+    - yes since four [week]{"entity": "sort.time", "value": "individual.week"} ago
+    - yes I started to feel this way since [week]{"entity": "sort.time", "value": "individual.week"}
+    - yes I started to feel this way since three [week]{"entity": "sort.time", "value": "individual.week"} ago
+    - yes I started to feel this way since a couple of [week]{"entity": "sort.time", "value": "individual.week"} ago
+    - yes it is [burns]{"entity": "sort.symptom", "value": "individual.burning_sensation"}
+    - yes I noticed that it was [fatigued and exhausted]{"entity": "sort.symptom", "value": "individual.fatigued"} times
+    - yes it is [Clarithromycin]{"entity": "sort.meds", "value": "individual.a_med"}
+    - yes it is [increasing]{"entity": "sort.level", "value": "individual.increase"}
+    - yes it [increasing]{"entity": "sort.level", "value": "individual.increase"}
+    - yes it actually [increasing]{"entity": "sort.level", "value": "individual.increase"}
+    - yes it would [increasing]{"entity": "sort.level", "value": "individual.increase"}
+    - yes it is [stomach pain]{"entity": "sort.symptom", "value": "individual.stomachache"}
+    - yes a little [right eye and right side of my face]{"entity": "sort.symptom", "value": "individual.eye_face_pain"}
     - no [short breaths]{"entity": "sort.symptom", "value": "individual.short_breaths"}
     - no [one sided]{"entity": "sort.symptom", "value": "individual.one_sided"}
     - no [Watery and brown]{"entity": "sort.symptom", "value": "individual.watery_brown"}
@@ -462,35 +500,39 @@ nlu:
     - no [increasing]{"entity": "sort.level", "value": "individual.increase"}
     - no [the more the merrier five](sort.string)
     - no [a software developer]{"entity": "sort.data", "value": "individual.it_related"}
-    - no I work as [an accountant]{"entity": "sort.data", "value": "individual.accountant"}
-    - no I work [in a call center]{"entity": "sort.data", "value": "individual.call_center"}
-    - no I currently work as [a software developer]{"entity": "sort.data", "value": "individual.it_related"}
-    - no [fatigued and exhausted]{"entity": "sort.symptom", "value": "individual.fatigued"}
-    - no I have [no appetite]{"entity": "sort.symptom", "value": "individual.no_appetite"}
-    - no I suffer from [exhausted]{"entity": "sort.symptom", "value": "individual.fatigued"}
-    - no I feel [short breaths like my chest is being closed]{"entity": "sort.symptom", "value": "individual.short_breaths"}
-    - no I am [nausea and diarrhea]{"entity": "sort.symptom", "value": "individual.nausea_diarrhea"}
-    - no it is [left eye and left side of my face]{"entity": "sort.symptom", "value": "individual.eye_face_pain"}
-    - no I feel the pain on the [no appetite]{"entity": "sort.symptom", "value": "individual.no_appetite"}
-    - no it hits on the [left eye and left side of my face]{"entity": "sort.symptom", "value": "individual.eye_face_pain"}
-    - no I feel on the [one side]{"entity": "sort.symptom", "value": "individual.one_sided"}
-    - no usually I can feel it [headache]{"entity": "sort.symptom", "value": "individual.headache"}
-    - no I feel pain in my [orange]{"entity": "sort.symptom", "value": "individual.orange_urine"}
-    - no there is a clear pain in the [no appetite]{"entity": "sort.symptom", "value": "individual.no_appetite"}
-    - no there is pain that hits in [fatigued]{"entity": "sort.symptom", "value": "individual.fatigued"}
-    - no it started two [yesterday]{"entity": "sort.time", "value": "individual.when"} ago
-    - no since [days]{"entity": "sort.time", "value": "individual.when"}
-    - no since four [weeks]{"entity": "sort.time", "value": "individual.when"} ago
-    - no I started to feel this way since two [yesterday]{"entity": "sort.time", "value": "individual.when"} ago
-    - no the last [days]{"entity": "sort.time", "value": "individual.when"} it increased substantially
-    - no it is [one side]{"entity": "sort.symptom", "value": "individual.one_sided"}
-    - no I noticed that it was [no appetite]{"entity": "sort.symptom", "value": "individual.no_appetite"} times
-    - no it is [decreasing]{"entity": "sort.level", "value": "individual.decrease"}
-    - no it [decreasing]{"entity": "sort.level", "value": "individual.decrease"}
-    - no it actually [decreasing]{"entity": "sort.level", "value": "individual.decrease"}
-    - no it would [decreasing]{"entity": "sort.level", "value": "individual.decrease"}
-    - no it is [Watery and the color is normal light brown]{"entity": "sort.symptom", "value": "individual.watery_brown"}
-    - no a little [Watery and the color is normal light brown]{"entity": "sort.symptom", "value": "individual.watery_brown"}
+    - no I work as [a programmer]{"entity": "sort.data", "value": "individual.it_related"}
+    - no I work [an informatics engineer]{"entity": "sort.data", "value": "individual.it_related"}
+    - no I currently work as [a journalist]{"entity": "sort.data", "value": "individual.journalist"}
+    - no [left side]{"entity": "sort.symptom", "value": "individual.one_sided"}
+    - no I have [fatigued]{"entity": "sort.symptom", "value": "individual.fatigued"}
+    - no I suffer from [Watery and the color is normal light brown]{"entity": "sort.symptom", "value": "individual.watery_brown"}
+    - no I feel [Watery and the color is normal light brown]{"entity": "sort.symptom", "value": "individual.watery_brown"}
+    - no I am [fatigued and exhausted]{"entity": "sort.symptom", "value": "individual.fatigued"}
+    - no it is [fatigued and exhausted]{"entity": "sort.symptom", "value": "individual.fatigued"}
+    - no I feel the pain on the [left side]{"entity": "sort.symptom", "value": "individual.one_sided"}
+    - no it hits on the [have appetite]{"entity": "sort.symptom", "value": "individual.with_appetite"}
+    - no I feel on the [fatigued and exhausted]{"entity": "sort.symptom", "value": "individual.fatigued"}
+    - no usually I can feel it [Watery and the color is normal light brown]{"entity": "sort.symptom", "value": "individual.watery_brown"}
+    - no I feel pain in my [Watery and the color is normal light brown]{"entity": "sort.symptom", "value": "individual.watery_brown"}
+    - no there is a clear pain in the [nausea and diarrhea]{"entity": "sort.symptom", "value": "individual.nausea_diarrhea"}
+    - no there is pain that hits in [Watery and the color is normal light brown]{"entity": "sort.symptom", "value": "individual.watery_brown"}
+    - no it started [weeks]{"entity": "sort.time", "value": "individual.week"}
+    - no it started three [weeks]{"entity": "sort.time", "value": "individual.week"} ago
+    - no it started a couple of [weeks]{"entity": "sort.time", "value": "individual.week"} ago
+    - no since two [weeks]{"entity": "sort.time", "value": "individual.week"} ago
+    - no since four [weeks]{"entity": "sort.time", "value": "individual.week"} ago
+    - no I started to feel this way since [weeks]{"entity": "sort.time", "value": "individual.week"}
+    - no I started to feel this way since three [weeks]{"entity": "sort.time", "value": "individual.week"} ago
+    - no I started to feel this way since a couple of [weeks]{"entity": "sort.time", "value": "individual.week"} ago
+    - no it is [headache]{"entity": "sort.symptom", "value": "individual.headache"}
+    - no I noticed that it was [fatigued]{"entity": "sort.symptom", "value": "individual.fatigued"} times
+    - no one of my doctors prescribed [Clarithromycin]{"entity": "sort.meds", "value": "individual.a_med"}
+    - no it is [low]{"entity": "sort.level", "value": "individual.low"}
+    - no it [low]{"entity": "sort.level", "value": "individual.low"}
+    - no it actually [low]{"entity": "sort.level", "value": "individual.low"}
+    - no it would [low]{"entity": "sort.level", "value": "individual.low"}
+    - no it is [stomachache]{"entity": "sort.symptom", "value": "individual.stomachache"}
+    - no a little [yellow to orange]{"entity": "sort.symptom", "value": "individual.orange_urine"}
 
 - intent: answer_negation
   examples: |
@@ -549,9 +591,11 @@ nlu:
     - not [in a call center]{"entity": "sort.data", "value": "individual.call_center"}
     - not [a journalist]{"entity": "sort.data", "value": "individual.journalist"}
     - not [Clarithromycin]{"entity": "sort.meds", "value": "individual.a_med"}
-    - not [yesterday]{"entity": "sort.time", "value": "individual.when"}
-    - not [days]{"entity": "sort.time", "value": "individual.when"}
-    - not [weeks]{"entity": "sort.time", "value": "individual.when"}
+    - not [week]{"entity": "sort.time", "value": "individual.week"}
+    - not [weeks]{"entity": "sort.time", "value": "individual.week"}
+    - not [yesterday]{"entity": "sort.time", "value": "individual.day"}
+    - not [today]{"entity": "sort.time", "value": "individual.day"}
+    - not [days]{"entity": "sort.time", "value": "individual.day"}
 
 - intent: NEGATIVE
   examples: |

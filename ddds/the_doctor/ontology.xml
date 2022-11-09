@@ -114,7 +114,8 @@
     <individual name="increase" sort="level"/>
     <individual name="decrease" sort="level"/>
 
-    <individual name="when" sort="time"/>
+    <individual name="week" sort="time"/>
+    <individual name="day" sort="time"/>
     <individual name="a_med" sort="meds"/>
     
     <individual name="diagnosis_done" sort="is_done"/>
